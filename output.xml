@@ -1,0 +1,1695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220621 17:10:57.390" rpa="false" schemaversion="3">
+<suite id="s1" name="UKRegressionTestSuite" source="C:\Users\kim.simbulan\PycharmProjects\Automation\Tests\UK\UKRegressionTestSuite.robot">
+<test id="s1-t1" name="TC20 Maps Functionality" line="226">
+<kw name="Open UK Website" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${UK_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220621 17:10:57.713" level="INFO">Opening browser 'chrome' to base url 'https://staging3.zimmermann.com/uk'.</msg>
+<status status="PASS" starttime="20220621 17:10:57.713" endtime="20220621 17:11:31.295"/>
+</kw>
+<status status="PASS" starttime="20220621 17:10:57.713" endtime="20220621 17:11:31.296"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220621 17:11:31.296" endtime="20220621 17:11:31.511"/>
+</kw>
+<kw name="Accept Cookie" library="resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:11:34.521" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:11:31.512" endtime="20220621 17:11:34.521"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>id:btn-cookie-accept</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:11:34.521" level="INFO">Simulating Mouse Over on element 'id:btn-cookie-accept'.</msg>
+<status status="PASS" starttime="20220621 17:11:34.521" endtime="20220621 17:11:34.801"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btn-cookie-accept</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:11:34.801" level="INFO">Clicking element 'id:btn-cookie-accept'.</msg>
+<status status="PASS" starttime="20220621 17:11:34.801" endtime="20220621 17:11:50.898"/>
+</kw>
+<status status="PASS" starttime="20220621 17:11:31.511" endtime="20220621 17:11:50.898"/>
+</kw>
+<kw name="Check Map Functionality" library="resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${STORE_LOCATOR_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220621 17:11:50.899" level="INFO">Opening url 'https://staging3.zimmermann.com/store/locate-store/'</msg>
+<status status="PASS" starttime="20220621 17:11:50.899" endtime="20220621 17:12:08.304"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,300)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220621 17:12:08.304" level="INFO">Executing JavaScript:
+window.scrollTo(0,300)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220621 17:12:08.304" endtime="20220621 17:12:08.312"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:12:11.322" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:12:08.312" endtime="20220621 17:12:11.322"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="map"]/div/div/div[2]/div[2]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220621 17:12:11.335" level="INFO">Current page contains element 'xpath://*[@id="map"]/div/div/div[2]/div[2]'.</msg>
+<status status="PASS" starttime="20220621 17:12:11.322" endtime="20220621 17:12:11.335"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath://*[@id="map"]/div/div/div[2]/div[2]/div/div[3]/div[24]/img</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:12:11.335" level="INFO">Simulating Mouse Over on element 'xpath://*[@id="map"]/div/div/div[2]/div[2]/div/div[3]/div[24]/img'.</msg>
+<status status="PASS" starttime="20220621 17:12:11.335" endtime="20220621 17:12:11.633"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="map"]/div/div/div[2]/div[2]/div/div[3]/div[24]/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:12:11.633" level="INFO">Clicking element 'xpath://*[@id="map"]/div/div/div[2]/div[2]/div/div[3]/div[24]/img'.</msg>
+<status status="PASS" starttime="20220621 17:12:11.633" endtime="20220621 17:12:11.689"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:12:14.699" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:12:11.689" endtime="20220621 17:12:14.700"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[3]/main/div[3]/div/div[3]/div/div/div/div[2]/div[2]/div/div[4]/div/div/div[2]/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:12:14.702" level="INFO">Clicking element 'xpath:/html/body/div[3]/main/div[3]/div/div[3]/div/div/div/div[2]/div[2]/div/div[4]/div/div/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20220621 17:12:14.700" endtime="20220621 17:12:16.143"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:12:19.147" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:12:16.143" endtime="20220621 17:12:19.147"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://h1[@class='heading heading--page store-details__name']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220621 17:12:19.255" level="INFO">Element 'xpath://h1[@class='heading heading--page store-details__name']' is displayed.</msg>
+<status status="PASS" starttime="20220621 17:12:19.147" endtime="20220621 17:12:19.255"/>
+</kw>
+<status status="PASS" starttime="20220621 17:11:50.899" endtime="20220621 17:12:19.255"/>
+</kw>
+<kw name="Save Screenshot Directory UK" library="resources">
+<kw name="Get Current Date" library="DateTime">
+<var>${date}</var>
+<arg>result_format=%d%m%y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20220621 17:12:19.257" level="INFO">${date} = 210622</msg>
+<status status="PASS" starttime="20220621 17:12:19.256" endtime="20220621 17:12:19.257"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>./Screenshots/UK/${date}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220621 17:12:19.257" endtime="20220621 17:12:19.257"/>
+</kw>
+<status status="PASS" starttime="20220621 17:12:19.256" endtime="20220621 17:12:19.257"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>UKTC20.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220621 17:12:19.555" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/UK/210622/UKTC20.png"&gt;&lt;img src="Screenshots/UK/210622/UKTC20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220621 17:12:19.259" endtime="20220621 17:12:19.556"/>
+</kw>
+<kw name="End Test" library="resources">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220621 17:12:19.556" endtime="20220621 17:12:21.986"/>
+</kw>
+<status status="PASS" starttime="20220621 17:12:19.556" endtime="20220621 17:12:21.986"/>
+</kw>
+<status status="PASS" starttime="20220621 17:10:57.713" endtime="20220621 17:12:21.987"/>
+</test>
+<test id="s1-t2" name="TC21 Store Page" line="235">
+<kw name="Open UK Website" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${UK_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220621 17:12:21.989" level="INFO">Opening browser 'chrome' to base url 'https://staging3.zimmermann.com/uk'.</msg>
+<status status="PASS" starttime="20220621 17:12:21.988" endtime="20220621 17:12:28.677"/>
+</kw>
+<status status="PASS" starttime="20220621 17:12:21.988" endtime="20220621 17:12:28.677"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220621 17:12:28.677" endtime="20220621 17:12:28.856"/>
+</kw>
+<kw name="Accept Cookie" library="resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:12:31.871" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:12:28.857" endtime="20220621 17:12:31.871"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>id:btn-cookie-accept</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:12:31.872" level="INFO">Simulating Mouse Over on element 'id:btn-cookie-accept'.</msg>
+<status status="PASS" starttime="20220621 17:12:31.872" endtime="20220621 17:12:32.182"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btn-cookie-accept</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:12:32.183" level="INFO">Clicking element 'id:btn-cookie-accept'.</msg>
+<status status="PASS" starttime="20220621 17:12:32.182" endtime="20220621 17:12:33.899"/>
+</kw>
+<status status="PASS" starttime="20220621 17:12:28.856" endtime="20220621 17:12:33.899"/>
+</kw>
+<kw name="Go to Store Locator UK" library="resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${STORE_LOCATOR_UK_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220621 17:12:33.901" level="INFO">Opening url 'https://staging3.zimmermann.com/uk/store/locate-store/'</msg>
+<status status="PASS" starttime="20220621 17:12:33.901" endtime="20220621 17:12:36.525"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:12:39.536" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:12:36.525" endtime="20220621 17:12:39.536"/>
+</kw>
+<status status="PASS" starttime="20220621 17:12:33.900" endtime="20220621 17:12:39.536"/>
+</kw>
+<kw name="Check the Stores UK &amp; EUROPE" library="resources">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,5500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220621 17:12:39.538" level="INFO">Executing JavaScript:
+window.scrollTo(0,5500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220621 17:12:39.538" endtime="20220621 17:12:39.556"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[contains(text(),'UK &amp; EUROPE')]</arg>
+<arg>UK &amp; EUROPE</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:39.557" level="INFO">Verifying element 'xpath://*[contains(text(),'UK &amp; EUROPE')]' contains exact text 'UK &amp; EUROPE'.</msg>
+<status status="PASS" starttime="20220621 17:12:39.557" endtime="20220621 17:12:39.603"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Cannes')]</arg>
+<arg>CANNES</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:39.604" level="INFO">Verifying element 'xpath://a[contains(text(),'Cannes')]' contains exact text 'CANNES'.</msg>
+<status status="PASS" starttime="20220621 17:12:39.603" endtime="20220621 17:12:39.636"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Capri')]</arg>
+<arg>CAPRI</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:39.637" level="INFO">Verifying element 'xpath://a[contains(text(),'Capri')]' contains exact text 'CAPRI'.</msg>
+<status status="PASS" starttime="20220621 17:12:39.637" endtime="20220621 17:12:39.661"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Forte Dei Marmi')]</arg>
+<arg>FORTE DEI MARMI</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:39.661" level="INFO">Verifying element 'xpath://a[contains(text(),'Forte Dei Marmi')]' contains exact text 'FORTE DEI MARMI'.</msg>
+<status status="PASS" starttime="20220621 17:12:39.661" endtime="20220621 17:12:39.684"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'MAYFAIR')]</arg>
+<arg>MAYFAIR</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:39.685" level="INFO">Verifying element 'xpath://a[contains(text(),'MAYFAIR')]' contains exact text 'MAYFAIR'.</msg>
+<status status="PASS" starttime="20220621 17:12:39.684" endtime="20220621 17:12:39.706"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Milan')]</arg>
+<arg>MILAN</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:39.706" level="INFO">Verifying element 'xpath://a[contains(text(),'Milan')]' contains exact text 'MILAN'.</msg>
+<status status="PASS" starttime="20220621 17:12:39.706" endtime="20220621 17:12:39.732"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Paris')]</arg>
+<arg>PARIS</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:39.733" level="INFO">Verifying element 'xpath://a[contains(text(),'Paris')]' contains exact text 'PARIS'.</msg>
+<status status="PASS" starttime="20220621 17:12:39.732" endtime="20220621 17:12:39.759"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Puerto Banus')]</arg>
+<arg>PUERTO BANUS</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:39.759" level="INFO">Verifying element 'xpath://a[contains(text(),'Puerto Banus')]' contains exact text 'PUERTO BANUS'.</msg>
+<status status="PASS" starttime="20220621 17:12:39.759" endtime="20220621 17:12:39.782"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'SPAIN')]</arg>
+<arg>SPAIN</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:39.782" level="INFO">Verifying element 'xpath://a[contains(text(),'SPAIN')]' contains exact text 'SPAIN'.</msg>
+<status status="PASS" starttime="20220621 17:12:39.782" endtime="20220621 17:12:39.812"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'St Tropez')]</arg>
+<arg>ST TROPEZ</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:39.812" level="INFO">Verifying element 'xpath://a[contains(text(),'St Tropez')]' contains exact text 'ST TROPEZ'.</msg>
+<status status="PASS" starttime="20220621 17:12:39.812" endtime="20220621 17:12:39.838"/>
+</kw>
+<status status="PASS" starttime="20220621 17:12:39.537" endtime="20220621 17:12:39.838"/>
+</kw>
+<kw name="Check the Stores AUSTRALIA" library="resources">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,300)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220621 17:12:39.840" level="INFO">Executing JavaScript:
+window.scrollTo(0,300)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220621 17:12:39.839" endtime="20220621 17:12:39.852"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[contains(text(),'AUSTRALIA')]</arg>
+<arg>AUSTRALIA</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:39.853" level="INFO">Verifying element 'xpath://*[contains(text(),'AUSTRALIA')]' contains exact text 'AUSTRALIA'.</msg>
+<status status="PASS" starttime="20220621 17:12:39.853" endtime="20220621 17:12:39.892"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,1200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220621 17:12:39.893" level="INFO">Executing JavaScript:
+window.scrollTo(0,1200)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220621 17:12:39.892" endtime="20220621 17:12:39.902"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'ADELAIDE')]</arg>
+<arg>ADELAIDE</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:39.903" level="INFO">Verifying element 'xpath://a[contains(text(),'ADELAIDE')]' contains exact text 'ADELAIDE'.</msg>
+<status status="PASS" starttime="20220621 17:12:39.902" endtime="20220621 17:12:40.084"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'ARMADALE')]</arg>
+<arg>ARMADALE</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.086" level="INFO">Verifying element 'xpath://a[contains(text(),'ARMADALE')]' contains exact text 'ARMADALE'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.085" endtime="20220621 17:12:40.143"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'BONDI')]</arg>
+<arg>BONDI</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.144" level="INFO">Verifying element 'xpath://a[contains(text(),'BONDI')]' contains exact text 'BONDI'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.144" endtime="20220621 17:12:40.214"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'BRISBANE')]</arg>
+<arg>BRISBANE</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.215" level="INFO">Verifying element 'xpath://a[contains(text(),'BRISBANE')]' contains exact text 'BRISBANE'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.215" endtime="20220621 17:12:40.246"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'CHADSTONE')]</arg>
+<arg>CHADSTONE</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.246" level="INFO">Verifying element 'xpath://a[contains(text(),'CHADSTONE')]' contains exact text 'CHADSTONE'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.246" endtime="20220621 17:12:40.271"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'CHATSWOOD')]</arg>
+<arg>CHATSWOOD</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.271" level="INFO">Verifying element 'xpath://a[contains(text(),'CHATSWOOD')]' contains exact text 'CHATSWOOD'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.271" endtime="20220621 17:12:40.292"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'CLAREMONT')]</arg>
+<arg>CLAREMONT</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.292" level="INFO">Verifying element 'xpath://a[contains(text(),'CLAREMONT')]' contains exact text 'CLAREMONT'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.292" endtime="20220621 17:12:40.334"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Doncaster')]</arg>
+<arg>DONCASTER</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.334" level="INFO">Verifying element 'xpath://a[contains(text(),'Doncaster')]' contains exact text 'DONCASTER'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.334" endtime="20220621 17:12:40.362"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Emporium')]</arg>
+<arg>EMPORIUM</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.363" level="INFO">Verifying element 'xpath://a[contains(text(),'Emporium')]' contains exact text 'EMPORIUM'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.362" endtime="20220621 17:12:40.394"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,1600)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220621 17:12:40.395" level="INFO">Executing JavaScript:
+window.scrollTo(0,1600)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220621 17:12:40.394" endtime="20220621 17:12:40.403"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Indooroopilly')]</arg>
+<arg>INDOOROOPILLY</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.404" level="INFO">Verifying element 'xpath://a[contains(text(),'Indooroopilly')]' contains exact text 'INDOOROOPILLY'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.404" endtime="20220621 17:12:40.454"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'James St')]</arg>
+<arg>JAMES ST</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.455" level="INFO">Verifying element 'xpath://a[contains(text(),'James St')]' contains exact text 'JAMES ST'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.454" endtime="20220621 17:12:40.501"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Macquarie')]</arg>
+<arg>MACQUARIE</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.501" level="INFO">Verifying element 'xpath://a[contains(text(),'Macquarie')]' contains exact text 'MACQUARIE'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.501" endtime="20220621 17:12:40.526"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,2000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220621 17:12:40.527" level="INFO">Executing JavaScript:
+window.scrollTo(0,2000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220621 17:12:40.526" endtime="20220621 17:12:40.531"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'MELBOURNE OUTLET')]</arg>
+<arg>MELBOURNE OUTLET</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.532" level="INFO">Verifying element 'xpath://a[contains(text(),'MELBOURNE OUTLET')]' contains exact text 'MELBOURNE OUTLET'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.532" endtime="20220621 17:12:40.575"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'MIRANDA')]</arg>
+<arg>MIRANDA</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.576" level="INFO">Verifying element 'xpath://a[contains(text(),'MIRANDA')]' contains exact text 'MIRANDA'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.575" endtime="20220621 17:12:40.644"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'PACIFIC FAIR')]</arg>
+<arg>PACIFIC FAIR</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.645" level="INFO">Verifying element 'xpath://a[contains(text(),'PACIFIC FAIR')]' contains exact text 'PACIFIC FAIR'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.644" endtime="20220621 17:12:40.696"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Paddington')]</arg>
+<arg>PADDINGTON</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.697" level="INFO">Verifying element 'xpath://a[contains(text(),'Paddington')]' contains exact text 'PADDINGTON'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.697" endtime="20220621 17:12:40.756"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'QV')]</arg>
+<arg>QV</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.757" level="INFO">Verifying element 'xpath://a[contains(text(),'QV')]' contains exact text 'QV'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.756" endtime="20220621 17:12:40.791"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'South Yarra')]</arg>
+<arg>SOUTH YARRA</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.792" level="INFO">Verifying element 'xpath://a[contains(text(),'South Yarra')]' contains exact text 'SOUTH YARRA'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.792" endtime="20220621 17:12:40.830"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'YDNEY CBD')]</arg>
+<arg>SYDNEY CBD</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.831" level="INFO">Verifying element 'xpath://a[contains(text(),'YDNEY CBD')]' contains exact text 'SYDNEY CBD'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.830" endtime="20220621 17:12:40.861"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'SYDNEY OUTLET')]</arg>
+<arg>SYDNEY OUTLET</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.861" level="INFO">Verifying element 'xpath://a[contains(text(),'SYDNEY OUTLET')]' contains exact text 'SYDNEY OUTLET'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.861" endtime="20220621 17:12:40.896"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Warringah Mall')]</arg>
+<arg>WARRINGAH MALL</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:40.897" level="INFO">Verifying element 'xpath://a[contains(text(),'Warringah Mall')]' contains exact text 'WARRINGAH MALL'.</msg>
+<status status="PASS" starttime="20220621 17:12:40.896" endtime="20220621 17:12:40.933"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:12:43.935" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:12:40.933" endtime="20220621 17:12:43.935"/>
+</kw>
+<status status="PASS" starttime="20220621 17:12:39.839" endtime="20220621 17:12:43.936"/>
+</kw>
+<kw name="Check the Stores UNITED STATES" library="resources">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,3500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220621 17:12:43.938" level="INFO">Executing JavaScript:
+window.scrollTo(0,3500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220621 17:12:43.937" endtime="20220621 17:12:43.944"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[contains(text(),'UNITED STATES')]</arg>
+<arg>UNITED STATES</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:43.945" level="INFO">Verifying element 'xpath://*[contains(text(),'UNITED STATES')]' contains exact text 'UNITED STATES'.</msg>
+<status status="PASS" starttime="20220621 17:12:43.944" endtime="20220621 17:12:44.011"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Americana Manhasset')]</arg>
+<arg>AMERICANA MANHASSET</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.048" level="INFO">Element 'xpath://a[contains(text(),'Americana Manhasset')]' contains text 'AMERICANA MANHASSET'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.011" endtime="20220621 17:12:44.048"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'BAL HARBOUR')]</arg>
+<arg>BAL HARBOUR</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.090" level="INFO">Element 'xpath://a[contains(text(),'BAL HARBOUR')]' contains text 'BAL HARBOUR'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.048" endtime="20220621 17:12:44.090"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Dallas')]</arg>
+<arg>DALLAS</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.117" level="INFO">Element 'xpath://a[contains(text(),'Dallas')]' contains text 'DALLAS'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.090" endtime="20220621 17:12:44.118"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'East Hampton')]</arg>
+<arg>EAST HAMPTON</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.141" level="INFO">Element 'xpath://a[contains(text(),'East Hampton')]' contains text 'EAST HAMPTON'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.118" endtime="20220621 17:12:44.141"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'GEORGIA')]</arg>
+<arg>GEORGIA</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.161" level="INFO">Element 'xpath://a[contains(text(),'GEORGIA')]' contains text 'GEORGIA'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.141" endtime="20220621 17:12:44.161"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Hawaii')]</arg>
+<arg>HAWAII</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.181" level="INFO">Element 'xpath://a[contains(text(),'Hawaii')]' contains text 'HAWAII'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.161" endtime="20220621 17:12:44.181"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Madison Avenue')]</arg>
+<arg>MADISON AVENUE</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.207" level="INFO">Element 'xpath://a[contains(text(),'Madison Avenue')]' contains text 'MADISON AVENUE'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.181" endtime="20220621 17:12:44.207"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Meatpacking')]</arg>
+<arg>MEATPACKING</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.239" level="INFO">Element 'xpath://a[contains(text(),'Meatpacking')]' contains text 'MEATPACKING'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.207" endtime="20220621 17:12:44.239"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Melrose Place')]</arg>
+<arg>MELROSE PLACE</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.262" level="INFO">Element 'xpath://a[contains(text(),'Melrose Place')]' contains text 'MELROSE PLACE'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.239" endtime="20220621 17:12:44.262"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Pacific Palisades')]</arg>
+<arg>PACIFIC PALISADES</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.285" level="INFO">Element 'xpath://a[contains(text(),'Pacific Palisades')]' contains text 'PACIFIC PALISADES'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.262" endtime="20220621 17:12:44.285"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Palm Beach')]</arg>
+<arg>PALM BEACH</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.314" level="INFO">Element 'xpath://a[contains(text(),'Palm Beach')]' contains text 'PALM BEACH'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.285" endtime="20220621 17:12:44.314"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'San Francisco')]</arg>
+<arg>SAN FRANCISCO</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.338" level="INFO">Element 'xpath://a[contains(text(),'San Francisco')]' contains text 'SAN FRANCISCO'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.314" endtime="20220621 17:12:44.338"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Short Hills')]</arg>
+<arg>SHORT HILLS</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.360" level="INFO">Element 'xpath://a[contains(text(),'Short Hills')]' contains text 'SHORT HILLS'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.338" endtime="20220621 17:12:44.360"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'SOHO')]</arg>
+<arg>SOHO</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.383" level="INFO">Element 'xpath://a[contains(text(),'SOHO')]' contains text 'SOHO'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.360" endtime="20220621 17:12:44.383"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'South Coast Plaza')]</arg>
+<arg>SOUTH COAST PLAZA</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.407" level="INFO">Element 'xpath://a[contains(text(),'South Coast Plaza')]' contains text 'SOUTH COAST PLAZA'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.383" endtime="20220621 17:12:44.407"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Woodbury Outlet')]</arg>
+<arg>WOODBURY OUTLET</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.431" level="INFO">Element 'xpath://a[contains(text(),'Woodbury Outlet')]' contains text 'WOODBURY OUTLET'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.407" endtime="20220621 17:12:44.431"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Wynn Plaza')]</arg>
+<arg>WYNN PLAZA</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.456" level="INFO">Element 'xpath://a[contains(text(),'Wynn Plaza')]' contains text 'WYNN PLAZA'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.431" endtime="20220621 17:12:44.456"/>
+</kw>
+<status status="PASS" starttime="20220621 17:12:43.937" endtime="20220621 17:12:44.456"/>
+</kw>
+<kw name="Check the Stores CHINA" library="resources">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,3000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220621 17:12:44.457" level="INFO">Executing JavaScript:
+window.scrollTo(0,3000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220621 17:12:44.457" endtime="20220621 17:12:44.462"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[contains(text(),'CHINA')]</arg>
+<arg>CHINA</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.463" level="INFO">Verifying element 'xpath://*[contains(text(),'CHINA')]' contains exact text 'CHINA'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.463" endtime="20220621 17:12:44.491"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Shanghai')]</arg>
+<arg>SHANGHAI</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:12:44.492" level="INFO">Verifying element 'xpath://a[contains(text(),'Shanghai')]' contains exact text 'SHANGHAI'.</msg>
+<status status="PASS" starttime="20220621 17:12:44.492" endtime="20220621 17:12:44.521"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:12:47.536" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:12:44.522" endtime="20220621 17:12:47.536"/>
+</kw>
+<status status="PASS" starttime="20220621 17:12:44.457" endtime="20220621 17:12:47.536"/>
+</kw>
+<kw name="Save Screenshot Directory UK" library="resources">
+<kw name="Get Current Date" library="DateTime">
+<var>${date}</var>
+<arg>result_format=%d%m%y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20220621 17:12:47.538" level="INFO">${date} = 210622</msg>
+<status status="PASS" starttime="20220621 17:12:47.537" endtime="20220621 17:12:47.538"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>./Screenshots/UK/${date}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220621 17:12:47.538" endtime="20220621 17:12:47.539"/>
+</kw>
+<status status="PASS" starttime="20220621 17:12:47.537" endtime="20220621 17:12:47.539"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>UKTC21.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220621 17:12:47.903" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/UK/210622/UKTC21.png"&gt;&lt;img src="Screenshots/UK/210622/UKTC21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220621 17:12:47.540" endtime="20220621 17:12:47.903"/>
+</kw>
+<kw name="End Test" library="resources">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220621 17:12:47.904" endtime="20220621 17:12:51.580"/>
+</kw>
+<status status="PASS" starttime="20220621 17:12:47.903" endtime="20220621 17:12:51.580"/>
+</kw>
+<status status="PASS" starttime="20220621 17:12:21.988" endtime="20220621 17:12:51.580"/>
+</test>
+<test id="s1-t3" name="TC37 Check and View Store Details LON, UK" line="248">
+<kw name="Open UK Website" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${UK_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220621 17:12:51.583" level="INFO">Opening browser 'chrome' to base url 'https://staging3.zimmermann.com/uk'.</msg>
+<status status="PASS" starttime="20220621 17:12:51.583" endtime="20220621 17:12:56.337"/>
+</kw>
+<status status="PASS" starttime="20220621 17:12:51.582" endtime="20220621 17:12:56.337"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220621 17:12:56.338" endtime="20220621 17:12:56.534"/>
+</kw>
+<kw name="Accept Cookie" library="resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:12:59.542" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:12:56.536" endtime="20220621 17:12:59.542"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>id:btn-cookie-accept</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:12:59.542" level="INFO">Simulating Mouse Over on element 'id:btn-cookie-accept'.</msg>
+<status status="PASS" starttime="20220621 17:12:59.542" endtime="20220621 17:12:59.820"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btn-cookie-accept</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:12:59.821" level="INFO">Clicking element 'id:btn-cookie-accept'.</msg>
+<status status="PASS" starttime="20220621 17:12:59.821" endtime="20220621 17:13:41.904"/>
+</kw>
+<status status="PASS" starttime="20220621 17:12:56.535" endtime="20220621 17:13:41.905"/>
+</kw>
+<kw name="Go to Store Locator UK" library="resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${STORE_LOCATOR_UK_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220621 17:13:41.906" level="INFO">Opening url 'https://staging3.zimmermann.com/uk/store/locate-store/'</msg>
+<status status="PASS" starttime="20220621 17:13:41.906" endtime="20220621 17:13:43.866"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:13:46.881" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:13:43.866" endtime="20220621 17:13:46.881"/>
+</kw>
+<status status="PASS" starttime="20220621 17:13:41.905" endtime="20220621 17:13:46.884"/>
+</kw>
+<kw name="Select Store" library="resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="state_search"]/div/div/div[1]/div/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:13:46.885" level="INFO">Clicking element 'xpath://*[@id="state_search"]/div/div/div[1]/div/div'.</msg>
+<status status="PASS" starttime="20220621 17:13:46.885" endtime="20220621 17:13:47.004"/>
+</kw>
+<status status="PASS" starttime="20220621 17:13:46.884" endtime="20220621 17:13:47.005"/>
+</kw>
+<kw name="Check and View Store Details LON, UK" library="resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://input[@class='select__field-input input__field choices__input--cloned']</arg>
+<arg>C</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220621 17:13:47.006" level="INFO">Typing text 'C' into text field 'xpath://input[@class='select__field-input input__field choices__input--cloned']'.</msg>
+<status status="PASS" starttime="20220621 17:13:47.006" endtime="20220621 17:13:47.155"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>NONE</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220621 17:13:47.156" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20220621 17:13:47.156" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20220621 17:13:47.156" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220621 17:13:47.155" endtime="20220621 17:13:49.815"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:13:52.831" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:13:49.815" endtime="20220621 17:13:52.831"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,1000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220621 17:13:52.832" level="INFO">Executing JavaScript:
+window.scrollTo(0,1000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220621 17:13:52.831" endtime="20220621 17:13:52.841"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[1]</arg>
+<arg>UK</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:13:52.842" level="INFO">Verifying element 'xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[1]' contains exact text 'UK'.</msg>
+<status status="PASS" starttime="20220621 17:13:52.842" endtime="20220621 17:13:52.873"/>
+</kw>
+<status status="PASS" starttime="20220621 17:13:47.005" endtime="20220621 17:13:52.873"/>
+</kw>
+<kw name="View Mayfair" library="resources">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:13:52.875" level="INFO">Simulating Mouse Over on element 'xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span'.</msg>
+<status status="PASS" starttime="20220621 17:13:52.875" endtime="20220621 17:13:53.158"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:13:53.159" level="INFO">Clicking element 'xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span'.</msg>
+<status status="PASS" starttime="20220621 17:13:53.158" endtime="20220621 17:13:55.483"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:13:58.490" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:13:55.483" endtime="20220621 17:13:58.490"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://h1[contains(text(),'MAYFAIR')]</arg>
+<arg>MAYFAIR</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:13:58.490" level="INFO">Verifying element 'xpath://h1[contains(text(),'MAYFAIR')]' contains exact text 'MAYFAIR'.</msg>
+<status status="PASS" starttime="20220621 17:13:58.490" endtime="20220621 17:13:58.522"/>
+</kw>
+<status status="PASS" starttime="20220621 17:13:52.874" endtime="20220621 17:13:58.522"/>
+</kw>
+<kw name="Check Store Details" library="resources">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id="store-details"]/div[2]/div[2]/div[1]</arg>
+<arg>STORE DETAILS</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:13:58.523" level="INFO">Verifying element 'xpath://*[@id="store-details"]/div[2]/div[2]/div[1]' contains exact text 'STORE DETAILS'.</msg>
+<status status="PASS" starttime="20220621 17:13:58.523" endtime="20220621 17:13:58.549"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@class='store-details__contact']/div[@class='store-details__label'][1]</arg>
+<arg>ADDRESS</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:13:58.550" level="INFO">Verifying element 'xpath://*[@class='store-details__contact']/div[@class='store-details__label'][1]' contains exact text 'ADDRESS'.</msg>
+<status status="PASS" starttime="20220621 17:13:58.550" endtime="20220621 17:13:58.575"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@class='store-details__contact']/div[@class='store-details__label'][2]</arg>
+<arg>PHONE</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:13:58.576" level="INFO">Verifying element 'xpath://*[@class='store-details__contact']/div[@class='store-details__label'][2]' contains exact text 'PHONE'.</msg>
+<status status="PASS" starttime="20220621 17:13:58.575" endtime="20220621 17:13:58.600"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@class='store-details__contact']/div[@class='store-details__label'][3]</arg>
+<arg>EMAIL</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:13:58.600" level="INFO">Verifying element 'xpath://*[@class='store-details__contact']/div[@class='store-details__label'][3]' contains exact text 'EMAIL'.</msg>
+<status status="PASS" starttime="20220621 17:13:58.600" endtime="20220621 17:13:58.624"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@class='store-details__trading']/div[@class='store-details__label']</arg>
+<arg>OPENING HOURS</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220621 17:13:58.625" level="INFO">Verifying element 'xpath://*[@class='store-details__trading']/div[@class='store-details__label']' contains exact text 'OPENING HOURS'.</msg>
+<status status="PASS" starttime="20220621 17:13:58.624" endtime="20220621 17:13:58.650"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:14:01.650" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:13:58.650" endtime="20220621 17:14:01.650"/>
+</kw>
+<status status="PASS" starttime="20220621 17:13:58.522" endtime="20220621 17:14:01.651"/>
+</kw>
+<kw name="Click Find a Store link" library="resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="store-details"]/div[1]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:14:01.653" level="INFO">Clicking element 'xpath://*[@id="store-details"]/div[1]/a/span'.</msg>
+<status status="PASS" starttime="20220621 17:14:01.652" endtime="20220621 17:14:08.375"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:14:11.381" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:14:08.376" endtime="20220621 17:14:11.381"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220621 17:14:11.382" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220621 17:14:11.381" endtime="20220621 17:14:11.395"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:01.652" endtime="20220621 17:14:11.395"/>
+</kw>
+<kw name="View ALL Stores" library="resources">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,1000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220621 17:14:11.398" level="INFO">Executing JavaScript:
+window.scrollTo(0,1000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220621 17:14:11.397" endtime="20220621 17:14:11.402"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:11.396" endtime="20220621 17:14:11.402"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:14:14.408" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:14:11.403" endtime="20220621 17:14:14.408"/>
+</kw>
+<kw name="Save Screenshot Directory UK" library="resources">
+<kw name="Get Current Date" library="DateTime">
+<var>${date}</var>
+<arg>result_format=%d%m%y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20220621 17:14:14.410" level="INFO">${date} = 210622</msg>
+<status status="PASS" starttime="20220621 17:14:14.409" endtime="20220621 17:14:14.410"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>./Screenshots/UK/${date}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220621 17:14:14.410" endtime="20220621 17:14:14.411"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:14.408" endtime="20220621 17:14:14.411"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>UKTC37.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220621 17:14:14.594" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/UK/210622/UKTC37.png"&gt;&lt;img src="Screenshots/UK/210622/UKTC37.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220621 17:14:14.412" endtime="20220621 17:14:14.595"/>
+</kw>
+<kw name="End Test" library="resources">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220621 17:14:14.596" endtime="20220621 17:14:17.004"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:14.595" endtime="20220621 17:14:17.004"/>
+</kw>
+<status status="PASS" starttime="20220621 17:12:51.582" endtime="20220621 17:14:17.006"/>
+</test>
+<test id="s1-t4" name="TC38 Check UK ALL Stores" line="264">
+<kw name="Open UK Website" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${UK_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220621 17:14:17.015" level="INFO">Opening browser 'chrome' to base url 'https://staging3.zimmermann.com/uk'.</msg>
+<status status="PASS" starttime="20220621 17:14:17.014" endtime="20220621 17:14:21.877"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:17.013" endtime="20220621 17:14:21.877"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220621 17:14:21.878" endtime="20220621 17:14:22.127"/>
+</kw>
+<kw name="Accept Cookie" library="resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:14:25.142" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:14:22.128" endtime="20220621 17:14:25.142"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>id:btn-cookie-accept</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:14:25.142" level="INFO">Simulating Mouse Over on element 'id:btn-cookie-accept'.</msg>
+<status status="PASS" starttime="20220621 17:14:25.142" endtime="20220621 17:14:25.427"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btn-cookie-accept</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:14:25.427" level="INFO">Clicking element 'id:btn-cookie-accept'.</msg>
+<status status="PASS" starttime="20220621 17:14:25.427" endtime="20220621 17:14:27.076"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:22.127" endtime="20220621 17:14:27.076"/>
+</kw>
+<kw name="Go to Store Locator UK" library="resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${STORE_LOCATOR_UK_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220621 17:14:27.078" level="INFO">Opening url 'https://staging3.zimmermann.com/uk/store/locate-store/'</msg>
+<status status="PASS" starttime="20220621 17:14:27.078" endtime="20220621 17:14:28.663"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:14:31.679" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:14:28.663" endtime="20220621 17:14:31.679"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:27.077" endtime="20220621 17:14:31.679"/>
+</kw>
+<kw name="Select Store" library="resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="state_search"]/div/div/div[1]/div/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:14:31.679" level="INFO">Clicking element 'xpath://*[@id="state_search"]/div/div/div[1]/div/div'.</msg>
+<status status="PASS" starttime="20220621 17:14:31.679" endtime="20220621 17:14:31.777"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:31.679" endtime="20220621 17:14:31.778"/>
+</kw>
+<kw name="Check and View Store Details UK ALL" library="resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://input[@class='select__field-input input__field choices__input--cloned']</arg>
+<arg>C</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220621 17:14:31.780" level="INFO">Typing text 'C' into text field 'xpath://input[@class='select__field-input input__field choices__input--cloned']'.</msg>
+<status status="PASS" starttime="20220621 17:14:31.780" endtime="20220621 17:14:31.935"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>NONE</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220621 17:14:31.935" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20220621 17:14:31.935" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20220621 17:14:31.936" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20220621 17:14:31.935" endtime="20220621 17:14:31.942"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:14:34.942" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:14:31.942" endtime="20220621 17:14:34.942"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>NONE</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220621 17:14:34.943" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20220621 17:14:34.943" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20220621 17:14:34.944" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220621 17:14:34.942" endtime="20220621 17:14:39.342"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:14:42.357" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:14:39.342" endtime="20220621 17:14:42.357"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,1000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220621 17:14:42.357" level="INFO">Executing JavaScript:
+window.scrollTo(0,1000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220621 17:14:42.357" endtime="20220621 17:14:42.364"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:31.779" endtime="20220621 17:14:42.364"/>
+</kw>
+<kw name="Check and View UK ALL" library="resources">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[1]</arg>
+<arg>UK</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220621 17:14:42.395" level="INFO">Element 'xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[1]' contains text 'UK'.</msg>
+<status status="PASS" starttime="20220621 17:14:42.365" endtime="20220621 17:14:42.395"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220621 17:14:42.396" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220621 17:14:42.395" endtime="20220621 17:14:42.400"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:42.365" endtime="20220621 17:14:42.401"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:14:45.415" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:14:42.401" endtime="20220621 17:14:45.415"/>
+</kw>
+<kw name="View ALL Stores" library="resources">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,1000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220621 17:14:45.417" level="INFO">Executing JavaScript:
+window.scrollTo(0,1000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220621 17:14:45.416" endtime="20220621 17:14:45.424"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:45.416" endtime="20220621 17:14:45.424"/>
+</kw>
+<kw name="Save Screenshot Directory UK" library="resources">
+<kw name="Get Current Date" library="DateTime">
+<var>${date}</var>
+<arg>result_format=%d%m%y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20220621 17:14:45.426" level="INFO">${date} = 210622</msg>
+<status status="PASS" starttime="20220621 17:14:45.426" endtime="20220621 17:14:45.426"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>./Screenshots/UK/${date}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220621 17:14:45.426" endtime="20220621 17:14:45.427"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:45.425" endtime="20220621 17:14:45.427"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>UKTC38.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220621 17:14:45.639" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/UK/210622/UKTC38.png"&gt;&lt;img src="Screenshots/UK/210622/UKTC38.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220621 17:14:45.427" endtime="20220621 17:14:45.639"/>
+</kw>
+<kw name="End Test" library="resources">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220621 17:14:45.640" endtime="20220621 17:14:48.168"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:45.640" endtime="20220621 17:14:48.168"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:17.010" endtime="20220621 17:14:48.168"/>
+</test>
+<test id="s1-t5" name="TC55 Jordan (DDP) - Guest User" line="278">
+<kw name="Open UK Website" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${UK_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220621 17:14:48.171" level="INFO">Opening browser 'chrome' to base url 'https://staging3.zimmermann.com/uk'.</msg>
+<status status="PASS" starttime="20220621 17:14:48.171" endtime="20220621 17:14:53.461"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:48.170" endtime="20220621 17:14:53.462"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220621 17:14:53.463" endtime="20220621 17:14:53.785"/>
+</kw>
+<kw name="Accept Cookie" library="resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:14:56.791" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:14:53.787" endtime="20220621 17:14:56.791"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>id:btn-cookie-accept</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:14:56.791" level="INFO">Simulating Mouse Over on element 'id:btn-cookie-accept'.</msg>
+<status status="PASS" starttime="20220621 17:14:56.791" endtime="20220621 17:14:57.078"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btn-cookie-accept</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:14:57.078" level="INFO">Clicking element 'id:btn-cookie-accept'.</msg>
+<status status="PASS" starttime="20220621 17:14:57.078" endtime="20220621 17:14:59.595"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:53.786" endtime="20220621 17:14:59.596"/>
+</kw>
+<kw name="Add Product to Cart UK" library="resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${PDP_URL_UK}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220621 17:14:59.598" level="INFO">Opening url 'https://staging3.zimmermann.com/uk/new-arrivals/shelly-scoop-buckle-1pc-teal-leopard.html'</msg>
+<status status="PASS" starttime="20220621 17:14:59.598" endtime="20220621 17:15:03.810"/>
+</kw>
+<status status="PASS" starttime="20220621 17:14:59.597" endtime="20220621 17:15:03.810"/>
+</kw>
+<kw name="Proceed to Cart Page" library="resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:15:06.824" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:15:03.813" endtime="20220621 17:15:06.824"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:option-label-size-1091-item-5123</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:15:06.824" level="INFO">Clicking element 'id:option-label-size-1091-item-5123'.</msg>
+<status status="PASS" starttime="20220621 17:15:06.824" endtime="20220621 17:15:06.876"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:product-addtocart-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:15:06.876" level="INFO">Clicking element 'id:product-addtocart-button'.</msg>
+<status status="PASS" starttime="20220621 17:15:06.876" endtime="20220621 17:15:06.942"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:15:11.948" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220621 17:15:06.942" endtime="20220621 17:15:11.948"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath://a[@class='header-button popup-trigger']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:15:11.948" level="INFO">Simulating Mouse Over on element 'xpath://a[@class='header-button popup-trigger']'.</msg>
+<status status="PASS" starttime="20220621 17:15:11.948" endtime="20220621 17:15:12.273"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://a[@class='header-button popup-trigger']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220621 17:15:12.274" endtime="20220621 17:15:12.298"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath://a[@class='header-button popup-trigger']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:15:12.298" level="INFO">Simulating Mouse Over on element 'xpath://a[@class='header-button popup-trigger']'.</msg>
+<status status="PASS" starttime="20220621 17:15:12.298" endtime="20220621 17:15:12.571"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:top-cart-btn-checkout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:15:12.571" level="INFO">Clicking element 'id:top-cart-btn-checkout'.</msg>
+<msg timestamp="20220621 17:15:12.864" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/UK/210622/selenium-screenshot-8.png"&gt;&lt;img src="Screenshots/UK/210622/selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220621 17:15:12.865" level="FAIL">Element with locator 'id:top-cart-btn-checkout' not found.</msg>
+<status status="FAIL" starttime="20220621 17:15:12.571" endtime="20220621 17:15:12.973"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220621 17:15:12.973" endtime="20220621 17:15:12.973"/>
+</kw>
+<status status="FAIL" starttime="20220621 17:15:03.812" endtime="20220621 17:15:12.973"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220621 17:15:12.974" endtime="20220621 17:15:12.974"/>
+</kw>
+<kw name="Continue as Guest User" library="resources">
+<status status="NOT RUN" starttime="20220621 17:15:12.974" endtime="20220621 17:15:12.974"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220621 17:15:12.975" endtime="20220621 17:15:12.975"/>
+</kw>
+<kw name="Select Country Jordan" library="resources">
+<status status="NOT RUN" starttime="20220621 17:15:12.975" endtime="20220621 17:15:12.975"/>
+</kw>
+<kw name="Check DDP" library="resources">
+<status status="NOT RUN" starttime="20220621 17:15:12.976" endtime="20220621 17:15:12.976"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220621 17:15:12.976" endtime="20220621 17:15:12.976"/>
+</kw>
+<kw name="Save Screenshot Directory UK" library="resources">
+<status status="NOT RUN" starttime="20220621 17:15:12.976" endtime="20220621 17:15:12.976"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>UKTC55.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20220621 17:15:12.977" endtime="20220621 17:15:12.977"/>
+</kw>
+<kw name="End Test" library="resources">
+<status status="NOT RUN" starttime="20220621 17:15:12.977" endtime="20220621 17:15:12.977"/>
+</kw>
+<status status="FAIL" starttime="20220621 17:14:48.170" endtime="20220621 17:15:12.977">Element with locator 'id:top-cart-btn-checkout' not found.</status>
+</test>
+<test id="s1-t6" name="TC56 Jordan (DDP) - Registered User" line="294">
+<kw name="Open Login UK" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://staging3.zimmermann.com/uk/customer/account/login/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220621 17:15:12.979" level="INFO">Opening browser 'chrome' to base url 'https://staging3.zimmermann.com/uk/customer/account/login/'.</msg>
+<status status="PASS" starttime="20220621 17:15:12.979" endtime="20220621 17:15:18.418"/>
+</kw>
+<status status="PASS" starttime="20220621 17:15:12.979" endtime="20220621 17:15:18.418"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220621 17:15:18.419" endtime="20220621 17:15:18.650"/>
+</kw>
+<kw name="Accept Cookie" library="resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:15:21.664" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:15:18.651" endtime="20220621 17:15:21.664"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>id:btn-cookie-accept</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:15:21.665" level="INFO">Simulating Mouse Over on element 'id:btn-cookie-accept'.</msg>
+<status status="PASS" starttime="20220621 17:15:21.664" endtime="20220621 17:15:21.960"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btn-cookie-accept</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:15:21.960" level="INFO">Clicking element 'id:btn-cookie-accept'.</msg>
+<status status="PASS" starttime="20220621 17:15:21.960" endtime="20220621 17:15:25.081"/>
+</kw>
+<status status="PASS" starttime="20220621 17:15:18.651" endtime="20220621 17:15:25.082"/>
+</kw>
+<kw name="Login To Website" library="resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:email</arg>
+<arg>kim.simbulan@zimmermann.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220621 17:15:25.085" level="INFO">Typing text 'kim.simbulan@zimmermann.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20220621 17:15:25.085" endtime="20220621 17:15:25.374"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:pass</arg>
+<arg>Password12!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220621 17:15:25.375" level="INFO">Typing text 'Password12!' into text field 'id:pass'.</msg>
+<status status="PASS" starttime="20220621 17:15:25.374" endtime="20220621 17:15:25.564"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:send2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:15:25.566" level="INFO">Clicking element 'id:send2'.</msg>
+<status status="PASS" starttime="20220621 17:15:25.564" endtime="20220621 17:15:29.533"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:15:32.547" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:15:29.533" endtime="20220621 17:15:32.547"/>
+</kw>
+<status status="PASS" starttime="20220621 17:15:25.084" endtime="20220621 17:15:32.547"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:15:35.551" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:15:32.548" endtime="20220621 17:15:35.551"/>
+</kw>
+<kw name="Add Product to Cart UK" library="resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${PDP_URL_UK}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220621 17:15:35.552" level="INFO">Opening url 'https://staging3.zimmermann.com/uk/new-arrivals/shelly-scoop-buckle-1pc-teal-leopard.html'</msg>
+<status status="PASS" starttime="20220621 17:15:35.552" endtime="20220621 17:15:37.920"/>
+</kw>
+<status status="PASS" starttime="20220621 17:15:35.552" endtime="20220621 17:15:37.920"/>
+</kw>
+<kw name="Proceed to Cart Page" library="resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:15:40.933" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:15:37.921" endtime="20220621 17:15:40.933"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:option-label-size-1091-item-5123</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:15:40.933" level="INFO">Clicking element 'id:option-label-size-1091-item-5123'.</msg>
+<status status="PASS" starttime="20220621 17:15:40.933" endtime="20220621 17:15:41.019"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:product-addtocart-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:15:41.019" level="INFO">Clicking element 'id:product-addtocart-button'.</msg>
+<status status="PASS" starttime="20220621 17:15:41.019" endtime="20220621 17:15:41.157"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:15:46.160" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220621 17:15:41.157" endtime="20220621 17:15:46.160"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath://a[@class='header-button popup-trigger']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:15:46.160" level="INFO">Simulating Mouse Over on element 'xpath://a[@class='header-button popup-trigger']'.</msg>
+<status status="PASS" starttime="20220621 17:15:46.160" endtime="20220621 17:15:46.738"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://a[@class='header-button popup-trigger']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220621 17:15:46.739" endtime="20220621 17:15:46.773"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath://a[@class='header-button popup-trigger']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:15:46.774" level="INFO">Simulating Mouse Over on element 'xpath://a[@class='header-button popup-trigger']'.</msg>
+<status status="PASS" starttime="20220621 17:15:46.773" endtime="20220621 17:15:47.066"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:top-cart-btn-checkout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:15:47.067" level="INFO">Clicking element 'id:top-cart-btn-checkout'.</msg>
+<msg timestamp="20220621 17:15:47.343" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/UK/210622/selenium-screenshot-9.png"&gt;&lt;img src="Screenshots/UK/210622/selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220621 17:15:47.343" level="FAIL">Element with locator 'id:top-cart-btn-checkout' not found.</msg>
+<status status="FAIL" starttime="20220621 17:15:47.066" endtime="20220621 17:15:47.344"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220621 17:15:47.344" endtime="20220621 17:15:47.344"/>
+</kw>
+<status status="FAIL" starttime="20220621 17:15:37.920" endtime="20220621 17:15:47.345"/>
+</kw>
+<kw name="Go to Checkout Page" library="resources">
+<status status="NOT RUN" starttime="20220621 17:15:47.345" endtime="20220621 17:15:47.346"/>
+</kw>
+<kw name="Select Country Jordan" library="resources">
+<status status="NOT RUN" starttime="20220621 17:15:47.346" endtime="20220621 17:15:47.346"/>
+</kw>
+<kw name="Check DDP" library="resources">
+<status status="NOT RUN" starttime="20220621 17:15:47.347" endtime="20220621 17:15:47.347"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220621 17:15:47.347" endtime="20220621 17:15:47.347"/>
+</kw>
+<kw name="Save Screenshot Directory UK" library="resources">
+<status status="NOT RUN" starttime="20220621 17:15:47.348" endtime="20220621 17:15:47.348"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>UKTC56.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20220621 17:15:47.348" endtime="20220621 17:15:47.348"/>
+</kw>
+<kw name="End Test" library="resources">
+<status status="NOT RUN" starttime="20220621 17:15:47.349" endtime="20220621 17:15:47.349"/>
+</kw>
+<status status="FAIL" starttime="20220621 17:15:12.978" endtime="20220621 17:15:47.349">Element with locator 'id:top-cart-btn-checkout' not found.</status>
+</test>
+<test id="s1-t7" name="TC57 Azerbaijan (DDP) - Guest User" line="310">
+<kw name="Open UK Website" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${UK_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220621 17:15:47.354" level="INFO">Opening browser 'chrome' to base url 'https://staging3.zimmermann.com/uk'.</msg>
+<status status="PASS" starttime="20220621 17:15:47.353" endtime="20220621 17:15:53.052"/>
+</kw>
+<status status="PASS" starttime="20220621 17:15:47.352" endtime="20220621 17:15:53.052"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220621 17:15:53.053" endtime="20220621 17:15:53.256"/>
+</kw>
+<kw name="Accept Cookie" library="resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:15:56.261" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:15:53.258" endtime="20220621 17:15:56.261"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>id:btn-cookie-accept</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:15:56.263" level="INFO">Simulating Mouse Over on element 'id:btn-cookie-accept'.</msg>
+<status status="PASS" starttime="20220621 17:15:56.261" endtime="20220621 17:15:56.555"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btn-cookie-accept</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:15:56.556" level="INFO">Clicking element 'id:btn-cookie-accept'.</msg>
+<status status="PASS" starttime="20220621 17:15:56.556" endtime="20220621 17:15:59.078"/>
+</kw>
+<status status="PASS" starttime="20220621 17:15:53.257" endtime="20220621 17:15:59.079"/>
+</kw>
+<kw name="Add Product to Cart UK" library="resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${PDP_URL_UK}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220621 17:15:59.089" level="INFO">Opening url 'https://staging3.zimmermann.com/uk/new-arrivals/shelly-scoop-buckle-1pc-teal-leopard.html'</msg>
+<status status="PASS" starttime="20220621 17:15:59.088" endtime="20220621 17:16:02.427"/>
+</kw>
+<status status="PASS" starttime="20220621 17:15:59.087" endtime="20220621 17:16:02.427"/>
+</kw>
+<kw name="Proceed to Cart Page" library="resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:16:05.438" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:16:02.430" endtime="20220621 17:16:05.438"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:option-label-size-1091-item-5123</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:16:05.438" level="INFO">Clicking element 'id:option-label-size-1091-item-5123'.</msg>
+<status status="PASS" starttime="20220621 17:16:05.438" endtime="20220621 17:16:05.514"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:product-addtocart-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:16:05.514" level="INFO">Clicking element 'id:product-addtocart-button'.</msg>
+<status status="PASS" starttime="20220621 17:16:05.514" endtime="20220621 17:16:05.625"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:16:10.630" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220621 17:16:05.626" endtime="20220621 17:16:10.630"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath://a[@class='header-button popup-trigger']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:16:10.631" level="INFO">Simulating Mouse Over on element 'xpath://a[@class='header-button popup-trigger']'.</msg>
+<status status="PASS" starttime="20220621 17:16:10.631" endtime="20220621 17:16:10.972"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://a[@class='header-button popup-trigger']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220621 17:16:10.972" endtime="20220621 17:16:10.998"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath://a[@class='header-button popup-trigger']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:16:10.998" level="INFO">Simulating Mouse Over on element 'xpath://a[@class='header-button popup-trigger']'.</msg>
+<status status="PASS" starttime="20220621 17:16:10.998" endtime="20220621 17:16:11.283"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:top-cart-btn-checkout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:16:11.284" level="INFO">Clicking element 'id:top-cart-btn-checkout'.</msg>
+<msg timestamp="20220621 17:16:11.564" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/UK/210622/selenium-screenshot-10.png"&gt;&lt;img src="Screenshots/UK/210622/selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220621 17:16:11.565" level="FAIL">Element with locator 'id:top-cart-btn-checkout' not found.</msg>
+<status status="FAIL" starttime="20220621 17:16:11.284" endtime="20220621 17:16:11.566"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220621 17:16:11.566" endtime="20220621 17:16:11.566"/>
+</kw>
+<status status="FAIL" starttime="20220621 17:16:02.429" endtime="20220621 17:16:11.567"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220621 17:16:11.567" endtime="20220621 17:16:11.568"/>
+</kw>
+<kw name="Continue as Guest User" library="resources">
+<status status="NOT RUN" starttime="20220621 17:16:11.568" endtime="20220621 17:16:11.568"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220621 17:16:11.568" endtime="20220621 17:16:11.569"/>
+</kw>
+<kw name="Select Country Azerbaijan" library="resources">
+<status status="NOT RUN" starttime="20220621 17:16:11.569" endtime="20220621 17:16:11.569"/>
+</kw>
+<kw name="Check DDP" library="resources">
+<status status="NOT RUN" starttime="20220621 17:16:11.570" endtime="20220621 17:16:11.570"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220621 17:16:11.570" endtime="20220621 17:16:11.570"/>
+</kw>
+<kw name="Save Screenshot Directory UK" library="resources">
+<status status="NOT RUN" starttime="20220621 17:16:11.570" endtime="20220621 17:16:11.570"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>UKTC57.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20220621 17:16:11.571" endtime="20220621 17:16:11.571"/>
+</kw>
+<kw name="End Test" library="resources">
+<status status="NOT RUN" starttime="20220621 17:16:11.571" endtime="20220621 17:16:11.571"/>
+</kw>
+<status status="FAIL" starttime="20220621 17:15:47.351" endtime="20220621 17:16:11.571">Element with locator 'id:top-cart-btn-checkout' not found.</status>
+</test>
+<test id="s1-t8" name="TC58 Azerbaijan (DDP) - Registered User" line="326">
+<kw name="Open Login UK" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://staging3.zimmermann.com/uk/customer/account/login/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220621 17:16:11.574" level="INFO">Opening browser 'chrome' to base url 'https://staging3.zimmermann.com/uk/customer/account/login/'.</msg>
+<status status="PASS" starttime="20220621 17:16:11.573" endtime="20220621 17:16:18.906"/>
+</kw>
+<status status="PASS" starttime="20220621 17:16:11.573" endtime="20220621 17:16:18.906"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220621 17:16:18.906" endtime="20220621 17:16:19.231"/>
+</kw>
+<kw name="Accept Cookie" library="resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:16:22.269" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:16:19.264" endtime="20220621 17:16:22.269"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>id:btn-cookie-accept</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:16:22.269" level="INFO">Simulating Mouse Over on element 'id:btn-cookie-accept'.</msg>
+<status status="PASS" starttime="20220621 17:16:22.269" endtime="20220621 17:16:22.547"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btn-cookie-accept</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:16:22.548" level="INFO">Clicking element 'id:btn-cookie-accept'.</msg>
+<status status="PASS" starttime="20220621 17:16:22.548" endtime="20220621 17:16:25.263"/>
+</kw>
+<status status="PASS" starttime="20220621 17:16:19.263" endtime="20220621 17:16:25.263"/>
+</kw>
+<kw name="Login To Website" library="resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:email</arg>
+<arg>kim.simbulan@zimmermann.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220621 17:16:25.265" level="INFO">Typing text 'kim.simbulan@zimmermann.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20220621 17:16:25.264" endtime="20220621 17:16:25.443"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:pass</arg>
+<arg>Password12!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220621 17:16:25.444" level="INFO">Typing text 'Password12!' into text field 'id:pass'.</msg>
+<status status="PASS" starttime="20220621 17:16:25.444" endtime="20220621 17:16:25.546"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:send2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:16:25.546" level="INFO">Clicking element 'id:send2'.</msg>
+<status status="PASS" starttime="20220621 17:16:25.546" endtime="20220621 17:16:29.330"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:16:32.337" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:16:29.330" endtime="20220621 17:16:32.337"/>
+</kw>
+<status status="PASS" starttime="20220621 17:16:25.264" endtime="20220621 17:16:32.337"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:16:35.339" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:16:32.337" endtime="20220621 17:16:35.339"/>
+</kw>
+<kw name="Add Product to Cart UK" library="resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${PDP_URL_UK}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220621 17:16:35.342" level="INFO">Opening url 'https://staging3.zimmermann.com/uk/new-arrivals/shelly-scoop-buckle-1pc-teal-leopard.html'</msg>
+<status status="PASS" starttime="20220621 17:16:35.341" endtime="20220621 17:16:37.674"/>
+</kw>
+<status status="PASS" starttime="20220621 17:16:35.340" endtime="20220621 17:16:37.675"/>
+</kw>
+<kw name="Proceed to Cart Page" library="resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:16:40.687" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220621 17:16:37.676" endtime="20220621 17:16:40.687"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:option-label-size-1091-item-5123</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:16:40.688" level="INFO">Clicking element 'id:option-label-size-1091-item-5123'.</msg>
+<status status="PASS" starttime="20220621 17:16:40.687" endtime="20220621 17:16:40.822"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:product-addtocart-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:16:40.823" level="INFO">Clicking element 'id:product-addtocart-button'.</msg>
+<status status="PASS" starttime="20220621 17:16:40.822" endtime="20220621 17:16:40.942"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220621 17:16:45.948" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220621 17:16:40.942" endtime="20220621 17:16:45.948"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath://a[@class='header-button popup-trigger']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:16:45.948" level="INFO">Simulating Mouse Over on element 'xpath://a[@class='header-button popup-trigger']'.</msg>
+<status status="PASS" starttime="20220621 17:16:45.948" endtime="20220621 17:16:46.268"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://a[@class='header-button popup-trigger']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220621 17:16:46.268" endtime="20220621 17:16:46.290"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath://a[@class='header-button popup-trigger']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220621 17:16:46.291" level="INFO">Simulating Mouse Over on element 'xpath://a[@class='header-button popup-trigger']'.</msg>
+<status status="PASS" starttime="20220621 17:16:46.290" endtime="20220621 17:16:46.574"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:top-cart-btn-checkout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220621 17:16:46.574" level="INFO">Clicking element 'id:top-cart-btn-checkout'.</msg>
+<msg timestamp="20220621 17:16:46.853" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/UK/210622/selenium-screenshot-11.png"&gt;&lt;img src="Screenshots/UK/210622/selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220621 17:16:46.853" level="FAIL">Element with locator 'id:top-cart-btn-checkout' not found.</msg>
+<status status="FAIL" starttime="20220621 17:16:46.574" endtime="20220621 17:16:46.854"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220621 17:16:46.855" endtime="20220621 17:16:46.855"/>
+</kw>
+<status status="FAIL" starttime="20220621 17:16:37.675" endtime="20220621 17:16:46.855"/>
+</kw>
+<kw name="Go to Checkout Page" library="resources">
+<status status="NOT RUN" starttime="20220621 17:16:46.856" endtime="20220621 17:16:46.856"/>
+</kw>
+<kw name="Select Country Azerbaijan" library="resources">
+<status status="NOT RUN" starttime="20220621 17:16:46.857" endtime="20220621 17:16:46.857"/>
+</kw>
+<kw name="Check DDP" library="resources">
+<status status="NOT RUN" starttime="20220621 17:16:46.857" endtime="20220621 17:16:46.857"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220621 17:16:46.858" endtime="20220621 17:16:46.858"/>
+</kw>
+<kw name="Save Screenshot Directory UK" library="resources">
+<status status="NOT RUN" starttime="20220621 17:16:46.858" endtime="20220621 17:16:46.859"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>UKTC58.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20220621 17:16:46.859" endtime="20220621 17:16:46.859"/>
+</kw>
+<kw name="End Test" library="resources">
+<status status="NOT RUN" starttime="20220621 17:16:46.859" endtime="20220621 17:16:46.859"/>
+</kw>
+<status status="FAIL" starttime="20220621 17:16:11.572" endtime="20220621 17:16:46.860">Element with locator 'id:top-cart-btn-checkout' not found.</status>
+</test>
+<status status="FAIL" starttime="20220621 17:10:57.390" endtime="20220621 17:16:46.863"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="4" skip="0" id="s1" name="UKRegressionTestSuite">UKRegressionTestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
