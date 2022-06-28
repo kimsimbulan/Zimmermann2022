@@ -5,25 +5,37 @@ Library     DateTime
 *** Variables ***
 ${BROWSER}        chrome
 ${URL}            https://www.zimmermann.com/
-${US_URL}         https://staging3.zimmermann.com/us
-${UK_URL}         https://staging3.zimmermann.com/uk
-${EU_URL}         https://staging3.zimmermann.com/eu
-${HK_URL}         https://staging3.zimmermann.com/hk
+${US_URL}         https://www.zimmermann.com/us
+${UK_URL}         https://www.zimmermann.com/uk
+${EU_URL}         https://www.zimmermann.com/eu
+${HK_URL}         https://www.zimmermann.com/hk
 ${AU_PLP_PAGE}    https://www.zimmermann.com/new-arrivals
+${EU_PLP_PAGE}    https://www.zimmermann.com/eu/new-arrivals
+${UK_PLP_PAGE}    https://www.zimmermann.com/new-arrivals
+${US_PLP_PAGE}    https://www.zimmermann.com/eu/new-arrivals
+${HK_PLP_PAGE}    https://www.zimmermann.com/new-arrivals
 ${AU_LOGIN_PAGE}    https://www.zimmermann.com/customer/account/login
+${EU_LOGIN_PAGE}    https://www.zimmermann.com/customer/eu/account/login
+${UK_LOGIN_PAGE}    https://www.zimmermann.com/customer/uk/account/login
+${US_LOGIN_PAGE}    https://www.zimmermann.com/customer/us/account/login
+${HK_LOGIN_PAGE}    https://www.zimmermann.com/customer/hk/account/login
 ${AU_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestAU6@gmail.com
 ${US_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestUS6@gmail.com
 ${UK_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestUK6@gmail.com
 ${EU_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestEU6@gmail.com
 ${HK_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestHK6@gmail.com
 ${STORE_LOCATOR_AU_URL}        https://www.zimmermann.com/store/locate-store/
-${STORE_LOCATOR_US_URL}     https://staging3.zimmermann.com/us/store/locate-store/
-${STORE_LOCATOR_EU_URL}     https://staging3.zimmermann.com/eu/store/locate-store/
-${STORE_LOCATOR_UK_URL}     https://staging3.zimmermann.com/uk/store/locate-store/
-${STORE_LOCATOR_HK_URL}     https://staging3.zimmermann.com/hk/store/locate-store/
+${STORE_LOCATOR_US_URL}     https://www.zimmermann.com/us/store/locate-store/
+${STORE_LOCATOR_EU_URL}     https://www.zimmermann.com/eu/store/locate-store/
+${STORE_LOCATOR_UK_URL}     https://www.zimmermann.com/uk/store/locate-store/
+${STORE_LOCATOR_HK_URL}     https://www.zimmermann.com/hk/store/locate-store/
 ${RESET_PASSWORD_EMAIL}     kim.simbulan@zimmermann.com
 ${EMPTY}    CTRL+a+BACKSPACE
 ${PDP_URL_AU}      https://www.zimmermann.com/new-arrivals/jeannie-ruched-side-bikini-bouquet-floral.html
+${PDP_URL_EU}      https://www.zimmermann.com/new-arrivals/eu/jeannie-ruched-side-bikini-bouquet-floral.html
+${PDP_URL_UK}      https://www.zimmermann.com/new-arrivals/uk/jeannie-ruched-side-bikini-bouquet-floral.html
+${PDP_URL_US}      https://www.zimmermann.com/new-arrivals/us/jeannie-ruched-side-bikini-bouquet-floral.html
+${PDP_URL_HK}      https://www.zimmermann.com/new-arrivals/hk/jeannie-ruched-side-bikini-bouquet-floral.html
 ${PRODUCT_NAME}     JEANNIE RUCHED SIDE BIKINI
 ${PROMO_CODE}   FREESHIP21
 
@@ -74,22 +86,34 @@ Login To Website
     sleep    3
 
 Open Registration AU
-    open browser    https://staging3.zimmermann.com/customer/account/create/    ${BROWSER}
+    open browser    https:/www.zimmermann.com/customer/account/create/    ${BROWSER}
 
 Open Registration US
-    open browser    https://staging3.zimmermann.com/us/customer/account/create/    ${BROWSER}
+    open browser    https://www.zimmermann.com/us/customer/account/create/    ${BROWSER}
 
 Open Registration UK
-    open browser    https://staging3.zimmermann.com/uk/customer/account/create/    ${BROWSER}
+    open browser    https://www.zimmermann.com/uk/customer/account/create/    ${BROWSER}
 
 Open Registration EU
-    open browser    https://staging3.zimmermann.com/eu/customer/account/create/    ${BROWSER}
+    open browser    https://www.zimmermann.com/eu/customer/account/create/    ${BROWSER}
 
 Open Registration HK
-    open browser    https://staging3.zimmermann.com/hk/customer/account/create/    ${BROWSER}
+    open browser    https://www.zimmermann.com/hk/customer/account/create/    ${BROWSER}
 
 Open Reset Password AU
-    open browser    https://staging3.zimmermann.com/customer/account/forgotpassword/    ${BROWSER}
+    open browser    https://www.zimmermann.com/customer/account/forgotpassword/    ${BROWSER}
+
+Open Reset Password EU
+    open browser    https://www.zimmermann.com/eu/customer/account/forgotpassword/    ${BROWSER}
+
+Open Reset Password UK
+    open browser    https://www.zimmermann.com/uk/customer/account/forgotpassword/    ${BROWSER}
+
+Open Reset Password US
+    open browser    https://www.zimmermann.com/us/customer/account/forgotpassword/    ${BROWSER}
+
+Open Reset Password HK
+    open browser    https://www.zimmermann.com/hk/customer/account/forgotpassword/    ${BROWSER}
 
 New Email Address (AU)
     input text    xpath://*[@id="email_address"]    ${AU_EMAIL_ADDRESS_REGISTRATION}
@@ -108,6 +132,34 @@ New Email Address (HK)
 
 Add Product to Cart AU
     go to    ${PDP_URL_AU}
+    sleep    3
+    click element    id:option-label-size-1091-item-5123
+    click element    id:product-addtocart-button
+    sleep    5
+
+Add Product to Cart EU
+    go to    ${PDP_URL_EU}
+    sleep    3
+    click element    id:option-label-size-1091-item-5123
+    click element    id:product-addtocart-button
+    sleep    5
+
+Add Product to Cart UK
+    go to    ${PDP_URL_UK}
+    sleep    3
+    click element    id:option-label-size-1091-item-5123
+    click element    id:product-addtocart-button
+    sleep    5
+
+Add Product to Cart US
+    go to    ${PDP_URL_US}
+    sleep    3
+    click element    id:option-label-size-1091-item-5123
+    click element    id:product-addtocart-button
+    sleep    5
+
+Add Product to Cart HK
+    go to    ${PDP_URL_HK}
     sleep    3
     click element    id:option-label-size-1091-item-5123
     click element    id:product-addtocart-button
@@ -150,6 +202,14 @@ Increment/Decrement QTY
     element attribute value should be    xpath://input[@class='input__field cart-list-item__qty-input quantity-update__input quantity-update__input--cart']     value    1
     sleep    3
 
+Add more products
+    click element    xpath ://button[@class='button button--icon quantity-update__button quantity-update__button--plus quantity-update__button--cart']
+    click element    xpath ://button[@class='button button--icon quantity-update__button quantity-update__button--plus quantity-update__button--cart']
+    click element    xpath ://button[@class='button button--icon quantity-update__button quantity-update__button--plus quantity-update__button--cart']
+    click element    xpath ://button[@class='button button--icon quantity-update__button quantity-update__button--plus quantity-update__button--cart']
+    click element    xpath ://button[@class='button button--icon quantity-update__button quantity-update__button--plus quantity-update__button--cart']
+    sleep    3
+
 Add a Promo to the Bag
     click element    xpath://div[@class='discount__title discount-code__title']
     input text    id:coupon_code    ${PROMO_CODE}
@@ -179,6 +239,22 @@ Click Checkout button from Bag
 
 View PLP Page
     go to     ${AU_PLP_PAGE}
+    sleep    3
+
+View PLP Page EU
+    go to     ${EU_PLP_PAGE}
+    sleep    3
+
+View PLP Page UK
+    go to     ${UK_PLP_PAGE}
+    sleep    3
+
+View PLP Page US
+    go to     ${US_PLP_PAGE}
+    sleep    3
+
+View PLP Page HK
+    go to     ${HK_PLP_PAGE}
     sleep    3
 
 Click View
@@ -284,9 +360,37 @@ Check DDU Message
     element should contain    xpath://*[@id="opc-sidebar"]/div[1]/div/div[2]/div[3]/div[7]/div    DUTIES AND TAXES ARE EXCLUDED AND MAY BE PAYABLE AT TIME OF ARRIVAL
     sleep    3
 
-Enter International Address(DDP)
+Enter International Address(DDP-New Zealand)
     click element       xpath://div[@class='select__field-item choices__item--selectable']
     input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     New Zealand
+    sleep    3
+    press keys    NONE  ENTER
+    sleep   3
+
+Enter International Address EU(DDP)
+    click element       xpath://div[@class='select__field-item choices__item--selectable']
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     Norway
+    sleep    3
+    press keys    NONE  ENTER
+    sleep   3
+
+Enter International Address UK(DDP-South Africa)
+    click element       xpath://div[@class='select__field-item choices__item--selectable']
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     South Africa
+    sleep    3
+    press keys    NONE  ENTER
+    sleep   3
+
+Enter International Address US(DDP-Canada)
+    click element       xpath://div[@class='select__field-item choices__item--selectable']
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     Canada
+    sleep    3
+    press keys    NONE  ENTER
+    sleep   3
+
+Enter International Address US(DDU-Chile)
+    click element       xpath://div[@class='select__field-item choices__item--selectable']
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     Chile
     sleep    3
     press keys    NONE  ENTER
     sleep   3
@@ -301,6 +405,62 @@ Enter International Address(DDP-New Caledonia)
 Enter International Address(DDU)
     click element       xpath://div[@class='select__field-item choices__item--selectable']
     input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     American Samoa
+    sleep    3
+    press keys    NONE  ENTER
+    sleep   3
+
+Enter International Address EU(DDU)
+    click element       xpath://div[@class='select__field-item choices__item--selectable']
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     Albania
+    sleep    3
+    press keys    NONE  ENTER
+    sleep   3
+
+Enter International Address UK(DDU-Afganistan)
+    click element       xpath://div[@class='select__field-item choices__item--selectable']
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     Afganistan
+    sleep    3
+    press keys    NONE  ENTER
+    sleep   3
+
+Enter International Address UK(UAE)
+    click element       xpath://div[@class='select__field-item choices__item--selectable']
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     United Arab Emirates
+    sleep    3
+    press keys    NONE  ENTER
+    sleep   3
+
+Enter International Address EU(Germany)
+    click element       xpath://div[@class='select__field-item choices__item--selectable']
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     Germany
+    sleep    3
+    press keys    NONE  ENTER
+    sleep   3
+
+Enter International Address EU(DDP-Turkey)
+    click element       xpath://div[@class='select__field-item choices__item--selectable']
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     Turkey
+    sleep    3
+    press keys    NONE  ENTER
+    sleep   3
+
+Enter International Address EU(DDU-Iceland)
+    click element       xpath://div[@class='select__field-item choices__item--selectable']
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     Iceland
+    sleep    3
+    press keys    NONE  ENTER
+    sleep   3
+
+Enter International Address HK(DDP-Taiwan)
+    click element       xpath://div[@class='select__field-item choices__item--selectable']
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     Taiwan
+    sleep    3
+    press keys    NONE  ENTER
+    sleep   3
+
+Enter International Address HK(DDU-Bangladesh)
+    click element       xpath://div[@class='select__field-item choices__item--selectable']
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     Bangladesh
     sleep    3
     press keys    NONE  ENTER
     sleep   3
@@ -574,6 +734,350 @@ Click Find a Store link
 
 View ALL Stores
     execute javascript    window.scrollTo(0,1000)
+
+View Area Store Filter EU
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   FR
+    element text should be    xpath://*[contains(text(),'FR, EU')]    FR, EU
+    press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   IT
+    element text should be    xpath://*[contains(text(),'IT, EU')]    IT, EU
+    press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   World
+    element should contain    id:choices-state_attr-item-choice-3   WORLDWIDE
+    press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
+    sleep    3
+
+View Area Store Filter UK
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   C
+    element text should be    xpath://*[contains(text(),'LON, UK')]    LON, UK
+    press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   World
+    element should contain    id:choices-state_attr-item-choice-2   WORLDWIDE
+    press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
+    sleep    3
+
+View Area Store Filter US
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   CA
+    element text should be    xpath://*[contains(text(),'CA, US')]    CA, US
+    press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   FL
+    element text should be    xpath://*[contains(text(),'FL, US')]    FL, US
+    press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   NV
+    element text should be    xpath://*[contains(text(),'NV, US')]    NV, US
+    press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   NY
+    element text should be    xpath://*[contains(text(),'NY, US')]    NY, US
+    press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   TX
+    element text should be    xpath://*[contains(text(),'TX, US')]    TX, US
+    press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   World
+    element should contain    id:choices-state_attr-item-choice-7   WORLDWIDE
+    press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
+    sleep    3
+
+View Area Store Filter HK
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']  SH
+    element text should be    xpath://*[contains(text(),'SH, CN')]    SH, CN
+    press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   World
+    element should contain    id:choices-state_attr-item-choice-2   WORLDWIDE
+    press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
+    sleep    3
+
+Check the Stores UK & EUROPE
+    execute javascript        window.scrollTo(0,5500)
+    element text should be    xpath://*[contains(text(),'UK & EUROPE')]         UK & EUROPE
+    element text should be    xpath://a[contains(text(),'Cannes')]              CANNES
+    element text should be    xpath://a[contains(text(),'Capri')]               CAPRI
+    element text should be    xpath://a[contains(text(),'Forte Dei Marmi')]     FORTE DEI MARMI
+    element text should be    xpath://a[contains(text(),'MAYFAIR')]             MAYFAIR
+    element text should be    xpath://a[contains(text(),'Milan')]               MILAN
+    element text should be    xpath://a[contains(text(),'Paris')]               PARIS
+    element text should be    xpath://a[contains(text(),'Puerto Banus')]        PUERTO BANUS
+    element text should be    xpath://a[contains(text(),'SPAIN')]               SPAIN
+    element text should be    xpath://a[contains(text(),'St Tropez')]           ST TROPEZ
+
+Check the Stores UNITED STATES
+    execute javascript    window.scrollTo(0,3500)
+    element text should be    xpath://*[contains(text(),'UNITED STATES')]           UNITED STATES
+    element should contain    xpath://a[contains(text(),'Americana Manhasset')]     AMERICANA MANHASSET
+    element should contain    xpath://a[contains(text(),'BAL HARBOUR')]             BAL HARBOUR
+    element should contain    xpath://a[contains(text(),'Dallas')]                  DALLAS
+    element should contain    xpath://a[contains(text(),'East Hampton')]            EAST HAMPTON
+    element should contain    xpath://a[contains(text(),'GEORGIA')]                 GEORGIA
+    element should contain    xpath://a[contains(text(),'Hawaii')]                  HAWAII
+    element should contain    xpath://a[contains(text(),'Madison Avenue')]          MADISON AVENUE
+    element should contain    xpath://a[contains(text(),'Meatpacking')]             MEATPACKING
+    element should contain    xpath://a[contains(text(),'Melrose Place')]           MELROSE PLACE
+    element should contain    xpath://a[contains(text(),'Pacific Palisades')]       PACIFIC PALISADES
+    element should contain    xpath://a[contains(text(),'Palm Beach')]              PALM BEACH
+    element should contain    xpath://a[contains(text(),'San Francisco')]           SAN FRANCISCO
+    element should contain    xpath://a[contains(text(),'Short Hills')]             SHORT HILLS
+    element should contain    xpath://a[contains(text(),'SOHO')]                    SOHO
+    element should contain    xpath://a[contains(text(),'South Coast Plaza')]       SOUTH COAST PLAZA
+    element should contain    xpath://a[contains(text(),'Woodbury Outlet')]         WOODBURY OUTLET
+    element should contain    xpath://a[contains(text(),'Wynn Plaza')]              WYNN PLAZA
+
+Check the Stores CHINA
+    execute javascript      window.scrollTo(0,3000)
+    element text should be  xpath://*[contains(text(),'CHINA')]     CHINA
+    element text should be  xpath://a[contains(text(),'Shanghai')]  SHANGHAI
+    sleep   3
+
+Check and View Store Details FR, EU
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   FR
+    press keys    NONE  ENTER
+    sleep    3
+    execute javascript    window.scrollTo(0,1000)
+    element should contain    xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[1]    FRANCE
+
+Check and View Store Details IT, EU
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   IT
+    press keys    NONE  ENTER
+    sleep    3
+    execute javascript    window.scrollTo(0,1000)
+    element should contain    xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[1]    ITALY
+
+Check and View Store Details SP, EU
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   SP
+    press keys    NONE  ENTER
+    sleep    3
+    execute javascript    window.scrollTo(0,1000)
+    element should contain    xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[1]    SPAIN
+
+View Cannes
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Cannes')]   CANNES
+
+View Paris
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[2]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[2]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Paris')]   PARIS
+
+View St Tropez
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[3]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[3]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'St Tropez')]   ST TROPEZ
+
+View Capri
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Capri')]   CAPRI
+
+View Forte Dei Marmi
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[2]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[2]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Forte Dei Marmi')]   FORTE DEI MARMI
+
+View Milan
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[3]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[3]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Milan')]   MILAN
+
+View Puerto Banus
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Puerto Banus')]   PUERTO BANUS
+
+View Spain
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[2]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[2]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'SPAIN')]   SPAIN
+
+Check and View Store Details LON, UK
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   C
+    press keys    NONE  ENTER
+    sleep    3
+    execute javascript    window.scrollTo(0,1000)
+    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[1]    UK
+
+Check and View Store Details CA, US
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   CA
+    press keys    NONE  ENTER
+    sleep    3
+    execute javascript    window.scrollTo(0,1000)
+    element text should be    xpath://*[contains(text(),'California')]    CALIFORNIA
+
+Check and View Store Details FL, US
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   FL
+    press keys    NONE  ENTER
+    sleep    3
+    execute javascript    window.scrollTo(0,1000)
+    element text should be    xpath://*[contains(text(),'Florida')]    FLORIDA
+
+Check and View Store Details GA, US
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   GA
+    press keys    NONE  ENTER
+    sleep    3
+    execute javascript    window.scrollTo(0,1000)
+    element text should be    xpath://*[contains(text(),'Georgia')]    GEORGIA
+
+Check and View Store Details HI, US
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   HI
+    press keys    NONE  ENTER
+    sleep    3
+    execute javascript    window.scrollTo(0,1000)
+    element text should be    xpath://*[contains(text(),'Hawaii')]    HAWAII
+
+Check and View Store Details NJ, US
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   NJ
+    press keys    NONE  ENTER
+    sleep    3
+    execute javascript    window.scrollTo(0,1000)
+    element text should be    xpath://*[contains(text(),'New Jersey')]    NEW JERSEY
+
+Check and View Store Details NV, US
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   NV
+    press keys    NONE  ENTER
+    sleep    3
+    execute javascript    window.scrollTo(0,1000)
+    element text should be    xpath://*[contains(text(),'Nevada')]    NEVADA
+
+Check and View Store Details NY, US
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   NY
+    press keys    NONE  ENTER
+    sleep    3
+    execute javascript    window.scrollTo(0,1000)
+    element text should be    xpath://*[contains(text(),'New York')]    NEW YORK
+
+Check and View Store Details TX, US
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   TX
+    press keys    NONE  ENTER
+    sleep    3
+    execute javascript    window.scrollTo(0,1000)
+    element text should be    xpath://*[contains(text(),'Texas')]    TEXAS
+
+Check and View Store Details SH, CN
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   C
+    press keys    NONE  ENTER
+    sleep    3
+    execute javascript    window.scrollTo(0,1000)
+    element should contain    xpath://*[contains(text(),'Shanghai')]   SHANGHAI
+
+View Shanghai
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Shanghai')]   SHANGHAI
+
+View Mayfair
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'MAYFAIR')]   MAYFAIR
+
+View Melrose Place
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Melrose Place')]   MELROSE PLACE
+
+View Pacific Palisades
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[2]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[2]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Pacific Palisades')]   PACIFIC PALISADES
+
+View San Franciso
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[3]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[3]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'San Francisco')]   SAN FRANCISCO
+
+View South Coast Plaza
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[4]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[4]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'South Coast Plaza')]   SOUTH COAST PLAZA
+
+View Bal Harbour
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'BAL HARBOUR')]   BAL HARBOUR
+
+View Palm Beach
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[2]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[2]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Palm Beach')]   PALM BEACH
+
+View Georgia
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'GEORGIA')]   GEORGIA
+
+View Hawaii
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Hawaii')]   HAWAII
+
+View Short Hills
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Short Hills')]   SHORT HILLS
+
+View Wynn Plaza
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Wynn Plaza')]   WYNN PLAZA
+
+View Americana Manhasset
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Americana Manhasset')]   AMERICANA MANHASSET
+
+View East Hampton
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[2]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[2]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'East Hampton')]   EAST HAMPTON
+
+View Madison Avenue
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[3]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[3]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Madison Avenue')]   MADISON AVENUE
+
+View Meatpacking
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[4]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[4]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Meatpacking')]   MEATPACKING
+
+View SOHO
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[5]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[5]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'SOHO')]   SOHO
+
+View Woodbury Outlet
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[6]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[6]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Woodbury Outlet')]   WOODBURY OUTLET
+
+View Dallas
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Dallas')]   DALLAS
 
 Save Screenshot Directory AU Sanity
     ${date}     Get Current Date    result_format=%d%m%y

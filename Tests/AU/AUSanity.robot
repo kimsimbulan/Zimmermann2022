@@ -458,11 +458,15 @@ TC35 New Zealand > $1000 (DDP)
     Accept Cookie
     sleep    3
     Add Product to Cart AU
+    Add Product to Cart AU
+    Add Product to Cart AU
+    Add Product to Cart AU
     Proceed to Cart Page
     Continue as a Guest
-    Enter International Address(DDP-New Caledonia)
+    Enter International Address(DDP-New Zealand)
     Check DDP Message
     Save Screenshot Directory AU Sanity
     capture page screenshot    AUTC35.png
     End Test
 
+TC36 New Caledonia (DDP)
