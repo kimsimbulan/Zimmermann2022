@@ -1,48 +1,46 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library    SeleniumLibraryTC02 Register User
+#    Open Registration EU
+#    maximize browser window
+#    Accept Cookie
+#    sleep    3
+#    New Email Address (EU)
+#    Fill in Registration Form
+#    Save Screenshot Directory EU Sanity
+#    capture page screenshot    EUTC02.png
+#    End Test
 Resource    ../../Resources/resourcessanity.robot
 
 *** Test Cases ***
 TC01 Login User
-    Open Login UK
+    Open Login EU
     maximize browser window
     accept cookie
     sleep    3
     Login To Website
-    Save Screenshot Directory UK Sanity
-    capture page screenshot    UKTC01.png
-    End Test
-
-TC02 Register User
-    Open Registration UK
-    maximize browser window
-    Accept Cookie
-    sleep    3
-    New Email Address (UK)
-    Fill in Registration Form
-    Save Screenshot Directory UK Sanity
-    capture page screenshot    UKTC02.png
+    Save Screenshot Directory EU Sanity
+    capture page screenshot   EUTC01.png
     End Test
 
 TC03 Reset Password
-    Open Reset Password UK
+    Open Reset Password EU
     maximize browser window
     Accept Cookie
     sleep    3
     Reset Password
-    Save Screenshot Directory UK Sanity
-    capture page screenshot    UKTC03.png
+    Save Screenshot Directory EU Sanity
+    capture page screenshot    EUTC03.png
     End Test
 
 TC04 Area wise store filter( dropdown)
-    Open UK Website
+    Open EU Website
     maximize browser window
     Accept Cookie
-    Go to Store Locator UK
+    Go to Store Locator EU
     Select Store
     View Area Store Filter EU
-    Save Screenshot Directory UK Sanity
-    capture page screenshot    UKTC04.png
+    Save Screenshot Directory EU Sanity
+    capture page screenshot    EUTC04.png
     End Test
 
 TC05 Store Listing
@@ -59,7 +57,7 @@ TC06-08-1 Store details page navigation / Store opening time / Back to store nav
     Open EU Website
     maximize browser window
     Accept Cookie
-    Go to Store Locator
+    Go to Store Locator EU
     Select Store
     Check and View Store Details FR, EU
     View Cannes
@@ -72,15 +70,15 @@ TC06-08-1 Store details page navigation / Store opening time / Back to store nav
     Check Store Details
     Click Find a Store link
     View ALL Stores
-    Save Screenshot Directory AU Sanity
-    capture page screenshot    AUTC06-08-1.png
+    Save Screenshot Directory EU Sanity
+    capture page screenshot    EUTC06-08-1.png
     End Test
 
 TC06-08-2 Store details page navigation / Store opening time / Back to store navigation
     Open EU Website
     maximize browser window
     Accept Cookie
-    Go to Store Locator
+    Go to Store Locator EU
     Select Store
     Check and View Store Details IT, EU
     View Capri
@@ -101,13 +99,13 @@ TC06-08-3 Store details page navigation / Store opening time / Back to store nav
     Open EU Website
     maximize browser window
     Accept Cookie
-    Go to Store Locator
+    Go to Store Locator EU
     Select Store
     Check and View Store Details SP, EU
-    View Puerto Banus
+    View Madrid
     Check Store Details
     Click Find a Store link
-    View Spain
+    View Puerto Banus
     Check Store Details
     Click Find a Store link
     View ALL Stores
@@ -162,6 +160,7 @@ TC12 Adding promo code from bag
     Add Product to Cart EU
     View Bag
     Add a Promo to the Bag
+    Verify message on on the bag
     Save Screenshot Directory EU Sanity
     capture page screenshot    EUTC12.png
     End Test
@@ -209,7 +208,7 @@ TC16 Add to bag from PLP
     Accept Cookie
     sleep    3
     View PLP Page EU
-    Click cart icon on plp
+    Click cart icon on PLP (EU)
     Save Screenshot Directory EU Sanity
     capture page screenshot    EUTC16.png
     End Test
@@ -221,7 +220,7 @@ TC17 Add to wishlist PLP
     sleep    3
     Login To Website
     View PLP Page EU
-    Click wishlist on PLP
+    Click wishlist on PLP (EU)
     Save Screenshot Directory EU Sanity
     capture page screenshot    EUTC17.png
     End Test
@@ -265,7 +264,7 @@ TC21 Search Results Page - Add to cart
     Accept Cookie
     sleep    3
     Search a Product
-    Click cart icon on PLP (Search Results Page)
+    Click cart icon on PLP (Search Results Page) (EU)
     Save Screenshot Directory EU Sanity
     capture page screenshot    EUTC21.png
     End Test
@@ -277,7 +276,7 @@ TC22 Search Results Page - Add to Wishlist
     sleep    3
     Login To Website
     Search a Product
-    Click wishlist on PLP
+    Click wishlist on PLP (Search Results Page) (EU)
     Save Screenshot Directory EU Sanity
     capture page screenshot    EUTC22.png
     End Test
@@ -412,10 +411,10 @@ TC40 Turkey > $1000 (DDP)
     Accept Cookie
     sleep    3
     Add Product to Cart EU
-    Add Product to Cart EU
-    Add Product to Cart EU
-    Add Product to Cart EU
-    Add Product to Cart EU
+#    Add Product to Cart EU
+#    Add Product to Cart EU
+#    Add Product to Cart EU
+#    Add Product to Cart EU
     Proceed to Cart Page
     Continue as a Guest
     Enter International Address EU(DDP-Turkey)

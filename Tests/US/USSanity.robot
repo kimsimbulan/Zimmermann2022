@@ -90,55 +90,58 @@ TC06-08-2 Store details page navigation / Store opening time / Back to store nav
     View Bal Harbour
     Check Store Details
     Click Find a Store link
-    View Palm Beach
-    Check Store Details
-    Click Find a Store link
+#    View Palm Beach
+#    Check Store Details
+#    Click Find a Store link
     View ALL Stores
     Save Screenshot Directory US Sanity
     capture page screenshot    USTC06-08-2.png
     End Test
 
-TC06-08-3 Store details page navigation / Store opening time / Back to store navigation
-    Open US Website
-    maximize browser window
-    Accept Cookie
-    Go to Store Locator US
-    Select Store
-    Check and View Store Details GA, US
-    View Georgia
-    Click Find a Store link
-    View ALL Stores
-    Save Screenshot Directory US Sanity
-    capture page screenshot    USTC06-08-3.png
-    End Test
-
-TC06-08-4 Store details page navigation / Store opening time / Back to store navigation
-    Open US Website
-    maximize browser window
-    Accept Cookie
-    Go to Store Locator US
-    Select Store
-    Check and View Store Details HI, US
-    View Hawaii
-    Click Find a Store link
-    View ALL Stores
-    Save Screenshot Directory US Sanity
-    capture page screenshot    USTC06-08-4.png
-    End Test
-
-TC06-08-5 Store details page navigation / Store opening time / Back to store navigation
-    Open US Website
-    maximize browser window
-    Accept Cookie
-    Go to Store Locator US
-    Select Store
-    Check and View Store Details NJ, US
-    View Short Hills
-    Click Find a Store link
-    View ALL Stores
-    Save Screenshot Directory US Sanity
-    capture page screenshot    USTC06-08-5.png
-    End Test
+#TC06-08-3 Store details page navigation / Store opening time / Back to store navigation
+##not added yet on prod
+#    Open US Website
+#    maximize browser window
+#    Accept Cookie
+#    Go to Store Locator US
+#    Select Store
+#    Check and View Store Details GA, US
+#    View Georgia
+#    Click Find a Store link
+#    View ALL Stores
+#    Save Screenshot Directory US Sanity
+#    capture page screenshot    USTC06-08-3.png
+#    End Test
+#
+#TC06-08-4 Store details page navigation / Store opening time / Back to store navigation
+##not added yet on prod
+#    Open US Website
+#    maximize browser window
+#    Accept Cookie
+#    Go to Store Locator US
+#    Select Store
+#    Check and View Store Details HI, US
+#    View Hawaii
+#    Click Find a Store link
+#    View ALL Stores
+#    Save Screenshot Directory US Sanity
+#    capture page screenshot    USTC06-08-4.png
+#    End Test
+#
+#TC06-08-5 Store details page navigation / Store opening time / Back to store navigation
+##not yet added on prod
+#    Open US Website
+#    maximize browser window
+#    Accept Cookie
+#    Go to Store Locator US
+#    Select Store
+#    Check and View Store Details NJ, US
+#    View Short Hills
+#    Click Find a Store link
+#    View ALL Stores
+#    Save Screenshot Directory US Sanity
+#    capture page screenshot    USTC06-08-5.png
+#    End Test
 
 TC06-08-6 Store details page navigation / Store opening time / Back to store navigation
     Open US Website
@@ -247,6 +250,7 @@ TC12 Adding promo code from bag
     Add Product to Cart US
     View Bag
     Add a Promo to the Bag
+    Verify message on on the bag
     Save Screenshot Directory US Sanity
     capture page screenshot    USTC12.png
     End Test
@@ -294,7 +298,7 @@ TC16 Add to bag from PLP
     Accept Cookie
     sleep    3
     View PLP Page US
-    Click cart icon on plp
+    Click cart icon on PLP
     Save Screenshot Directory US Sanity
     capture page screenshot    USTC16.png
     End Test
@@ -306,7 +310,7 @@ TC17 Add to wishlist PLP
     sleep    3
     Login To Website
     View PLP Page US
-    Click wishlist on PLP
+    Click wishlist on PLP (US)
     Save Screenshot Directory US Sanity
     capture page screenshot    USTC17.png
     End Test
@@ -362,7 +366,7 @@ TC22 Search Results Page - Add to Wishlist
     sleep    3
     Login To Website
     Search a Product
-    Click wishlist on PLP
+    Click cart icon on PLP (Search Results Page)
     Save Screenshot Directory US Sanity
     capture page screenshot    USTC22.png
     End Test
@@ -444,7 +448,7 @@ TC32 DDU messaging correctly displays
     Add Product to Cart US
     Proceed to Cart Page
     Continue as a Guest
-    Enter International Address US(DDU-Chile)
+    Enter International Address US(DDU-Aruba)
     Check DDU Message
     Save Screenshot Directory US Sanity
     capture page screenshot    USTC32.png
@@ -478,15 +482,15 @@ TC46 Canada (DDP)
     End Test
 
 TC47 Chile (DDU)
-    Open EU Website
+    Open US Website
     maximize browser window
     Accept Cookie
     sleep    3
-    Add Product to Cart UK
+    Add Product to Cart US
     Proceed to Cart Page
     Continue as a Guest
-    Enter International Address US(DDU-Chile)
-    Check DDU Message
+    Enter International Address US(DDP-Chile)
+    Check DDP Message
     Save Screenshot Directory US Sanity
     capture page screenshot    USTC47.png
     End Test

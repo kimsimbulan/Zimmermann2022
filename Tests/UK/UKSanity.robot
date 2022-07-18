@@ -59,7 +59,7 @@ TC06-08-1 Store details page navigation / Store opening time / Back to store nav
     Open UK Website
     maximize browser window
     Accept Cookie
-    Go to Store Locator
+    Go to Store Locator UK
     Select Store
     Check and View Store Details LON, UK
     View Mayfair
@@ -117,6 +117,7 @@ TC12 Adding promo code from bag
     Add Product to Cart UK
     View Bag
     Add a Promo to the Bag
+    Verify message on on the bag
     Save Screenshot Directory UK Sanity
     capture page screenshot    UKTC12.png
     End Test
@@ -164,7 +165,7 @@ TC16 Add to bag from PLP
     Accept Cookie
     sleep    3
     View PLP Page UK
-    Click cart icon on plp
+    Click cart icon on PLP (UK)
     Save Screenshot Directory UK Sanity
     capture page screenshot    UKTC16.png
     End Test
@@ -176,7 +177,7 @@ TC17 Add to wishlist PLP
     sleep    3
     Login To Website
     View PLP Page UK
-    Click wishlist on PLP
+    Click wishlist on PLP (UK)
     Save Screenshot Directory UK Sanity
     capture page screenshot    UKTC17.png
     End Test
@@ -232,7 +233,7 @@ TC22 Search Results Page - Add to Wishlist
     sleep    3
     Login To Website
     Search a Product
-    Click wishlist on PLP
+    Click wishlist on PLP (Search Results Page) (UK)
     Save Screenshot Directory UK Sanity
     capture page screenshot    UKTC22.png
     End Test

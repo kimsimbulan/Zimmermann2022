@@ -236,6 +236,7 @@ TC12 Adding promo code from bag
     Add Product to Cart AU
     View Bag
     Add a Promo to the Bag
+    Verify message on the bag (AU)
     Save Screenshot Directory AU Sanity
     capture page screenshot    AUTC12.png
     End Test
@@ -295,7 +296,7 @@ TC17 Add to wishlist PLP
     sleep    3
     Login To Website
     View PLP Page
-    Click wishlist on PLP
+    Click wishlist on PLP (AU)
     Save Screenshot Directory AU Sanity
     capture page screenshot    AUTC17.png
     End Test
@@ -351,7 +352,7 @@ TC22 Search Results Page - Add to Wishlist
     sleep    3
     Login To Website
     Search a Product
-    Click wishlist on PLP
+    Click wishlist on PLP (Search Results Page) (AU)
     Save Screenshot Directory AU Sanity
     capture page screenshot    AUTC22.png
     End Test
@@ -393,19 +394,21 @@ TC29 Accessibility link in footer
     maximize browser window
     Accept Cookie
     sleep    3
-    Check Accessibility Footer
+    Check Accessibility Footer (AU)
     Save Screenshot Directory AU Sanity
     capture page screenshot    AUTC29.png
     End Test
 
 TC30 No taxes/duties messaging for non DDP/DDU countries
-    Open AU Website
+    Open Login AU
     maximize browser window
     Accept Cookie
+    Login To Website
     sleep    3
     Add Product to Cart AU
     Proceed to Cart Page
-    Continue as a Guest
+    Click Add New button
+    Enter International Address(Non DDU/DDP - Australia)
     Check No taxes/duties messaging for non DDP/DDU countries
     Save Screenshot Directory AU Sanity
     capture page screenshot    AUTC30.png
@@ -419,7 +422,7 @@ TC31 DDP messaging correctly displays
     Add Product to Cart AU
     Proceed to Cart Page
     Continue as a Guest
-    Enter International Address(DDP)
+    Enter International Address(DDP-New Zealand)
     Check DDP Message
     Save Screenshot Directory AU Sanity
     capture page screenshot    AUTC31.png
@@ -440,13 +443,15 @@ TC32 DDU messaging correctly displays
     End Test
 
 TC34 Australia (non DDP or DDU)
-    Open AU Website
+    Open Login AU
     maximize browser window
     Accept Cookie
     sleep    3
+    Login To Website
     Add Product to Cart AU
     Proceed to Cart Page
-    Continue as a Guest
+    Click Add New button
+    Enter International Address(Non DDU/DDP - Australia)
     Check No taxes/duties messaging for non DDP/DDU countries
     Save Screenshot Directory AU Sanity
     capture page screenshot    AUTC34.png
@@ -470,3 +475,16 @@ TC35 New Zealand > $1000 (DDP)
     End Test
 
 TC36 New Caledonia (DDP)
+    Open Login AU
+    maximize browser window
+    Accept Cookie
+    sleep    3
+    Login To Website
+    Add Product to Cart AU
+    Proceed to Cart Page
+    Click Add New button
+    Enter International Address(DDP-New Caledonia)
+    Check DDP Message
+    Save Screenshot Directory AU Sanity
+    capture page screenshot    AUTC36.png
+    End Test

@@ -117,6 +117,7 @@ TC12 Adding promo code from bag
     Add Product to Cart HK
     View Bag
     Add a Promo to the Bag
+    Verify message on on the bag
     Save Screenshot Directory HK Sanity
     capture page screenshot    HKTC12.png
     End Test
@@ -176,7 +177,7 @@ TC17 Add to wishlist PLP
     sleep    3
     Login To Website
     View PLP Page HK
-    Click wishlist on PLP
+    Click wishlist on PLP (AU)
     Save Screenshot Directory HK Sanity
     capture page screenshot    HKTC17.png
     End Test
@@ -209,7 +210,7 @@ TC20 View All (Infinite Scroll)
     Accept Cookie
     sleep    3
     View PLP Page HK
-    Click View All
+    Click View All HK
     Save Screenshot Directory HK Sanity
     capture page screenshot    HKTC20.png
     End Test
@@ -232,7 +233,7 @@ TC22 Search Results Page - Add to Wishlist
     sleep    3
     Login To Website
     Search a Product
-    Click wishlist on PLP
+    Click wishlist on PLP (Search Results Page) (AU)
     Save Screenshot Directory HK Sanity
     capture page screenshot    HKTC22.png
     End Test
@@ -321,13 +322,13 @@ TC32 DDU messaging correctly displays
     End Test
 
 TC48 Hong Kong (non DDP or DDU)
-    Open HK Website
+    Open Login HK
     maximize browser window
     Accept Cookie
     sleep    3
+    Login To Website
     Add Product to Cart HK
     Proceed to Cart Page
-    Continue as a Guest
     Check No taxes/duties messaging for non DDP/DDU countries
     Save Screenshot Directory HK Sanity
     capture page screenshot    HKTC48.png

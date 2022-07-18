@@ -11,19 +11,19 @@ ${EU_URL}         https://www.zimmermann.com/eu
 ${HK_URL}         https://www.zimmermann.com/hk
 ${AU_PLP_PAGE}    https://www.zimmermann.com/new-arrivals
 ${EU_PLP_PAGE}    https://www.zimmermann.com/eu/new-arrivals
-${UK_PLP_PAGE}    https://www.zimmermann.com/new-arrivals
-${US_PLP_PAGE}    https://www.zimmermann.com/eu/new-arrivals
-${HK_PLP_PAGE}    https://www.zimmermann.com/new-arrivals
+${UK_PLP_PAGE}    https://www.zimmermann.com/uk/new-arrivals
+${US_PLP_PAGE}    https://www.zimmermann.com/us/new-arrivals
+${HK_PLP_PAGE}    https://www.zimmermann.com/hk/new-arrivals
 ${AU_LOGIN_PAGE}    https://www.zimmermann.com/customer/account/login
-${EU_LOGIN_PAGE}    https://www.zimmermann.com/customer/eu/account/login
-${UK_LOGIN_PAGE}    https://www.zimmermann.com/customer/uk/account/login
-${US_LOGIN_PAGE}    https://www.zimmermann.com/customer/us/account/login
-${HK_LOGIN_PAGE}    https://www.zimmermann.com/customer/hk/account/login
-${AU_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestAU6@gmail.com
-${US_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestUS6@gmail.com
-${UK_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestUK6@gmail.com
-${EU_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestEU6@gmail.com
-${HK_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestHK6@gmail.com
+${EU_LOGIN_PAGE}    https://www.zimmermann.com/eu/customer/account/login
+${UK_LOGIN_PAGE}    https://www.zimmermann.com/uk/customer/account/login
+${US_LOGIN_PAGE}    https://www.zimmermann.com/us/customer/account/login
+${HK_LOGIN_PAGE}    https://www.zimmermann.com/hk/customer/account/login
+${AU_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestAU7@gmail.com
+${US_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestUS7@gmail.com
+${UK_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestUK7@gmail.com
+${EU_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestEU7@gmail.com
+${HK_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestHK7@gmail.com
 ${STORE_LOCATOR_AU_URL}        https://www.zimmermann.com/store/locate-store/
 ${STORE_LOCATOR_US_URL}     https://www.zimmermann.com/us/store/locate-store/
 ${STORE_LOCATOR_EU_URL}     https://www.zimmermann.com/eu/store/locate-store/
@@ -32,28 +32,29 @@ ${STORE_LOCATOR_HK_URL}     https://www.zimmermann.com/hk/store/locate-store/
 ${RESET_PASSWORD_EMAIL}     kim.simbulan@zimmermann.com
 ${EMPTY}    CTRL+a+BACKSPACE
 ${PDP_URL_AU}      https://www.zimmermann.com/new-arrivals/jeannie-ruched-side-bikini-bouquet-floral.html
-${PDP_URL_EU}      https://www.zimmermann.com/new-arrivals/eu/jeannie-ruched-side-bikini-bouquet-floral.html
-${PDP_URL_UK}      https://www.zimmermann.com/new-arrivals/uk/jeannie-ruched-side-bikini-bouquet-floral.html
-${PDP_URL_US}      https://www.zimmermann.com/new-arrivals/us/jeannie-ruched-side-bikini-bouquet-floral.html
-${PDP_URL_HK}      https://www.zimmermann.com/new-arrivals/hk/jeannie-ruched-side-bikini-bouquet-floral.html
+${PDP_URL_EU}      https://www.zimmermann.com/eu/swim/swimwear/jeannie-terry-scoop-bikini-mustard.html
+${PDP_URL_UK}      https://www.zimmermann.com/uk/new-arrivals/jeannie-tie-bandeau-dress-mustard.html
+${PDP_URL_US}      https://www.zimmermann.com/us/new-arrivals/jeannie-ruched-side-bikini-bouquet-floral.html
+${PDP_URL_HK}      https://www.zimmermann.com/hk/new-arrivals/jeannie-ruched-side-bikini-bouquet-floral.html
 ${PRODUCT_NAME}     JEANNIE RUCHED SIDE BIKINI
+${PRODUCT_NAME_UK}     JEANNIE TIE BANDEAU DRESS
 ${PROMO_CODE}   FREESHIP21
 
 *** Keywords ***
 Open Login AU
-    open browser    ${AU_LOGIN_PAGE}     ${BROWSER}
+    open browser    ${AU_LOGIN_PAGE}   ${BROWSER}
 
 Open Login US
-    open browser    https://staging3.zimmermann.com/us/customer/account/login/  ${BROWSER}
+    open browser    ${US_LOGIN_PAGE}   ${BROWSER}
 
 Open Login UK
-    open browser    https://staging3.zimmermann.com/uk/customer/account/login/  ${BROWSER}
+    open browser    ${UK_LOGIN_PAGE}   ${BROWSER}
 
 Open Login EU
-    open browser    https://staging3.zimmermann.com/eu/customer/account/login/  ${BROWSER}
+    open browser    ${EU_LOGIN_PAGE}   ${BROWSER}
 
 Open Login HK
-    open browser    https://staging3.zimmermann.com/hk/customer/account/login/  ${BROWSER}
+    open browser    ${HK_LOGIN_PAGE}   ${BROWSER}
 
 Open AU Website
     open browser    ${URL}  chrome
@@ -131,6 +132,7 @@ New Email Address (HK)
     input text    xpath://*[@id="email_address"]    ${HK_EMAIL_ADDRESS_REGISTRATION}
 
 Add Product to Cart AU
+    sleep    3
     go to    ${PDP_URL_AU}
     sleep    3
     click element    id:option-label-size-1091-item-5123
@@ -138,6 +140,7 @@ Add Product to Cart AU
     sleep    5
 
 Add Product to Cart EU
+    sleep    3
     go to    ${PDP_URL_EU}
     sleep    3
     click element    id:option-label-size-1091-item-5123
@@ -145,6 +148,7 @@ Add Product to Cart EU
     sleep    5
 
 Add Product to Cart UK
+    sleep       3
     go to    ${PDP_URL_UK}
     sleep    3
     click element    id:option-label-size-1091-item-5123
@@ -152,6 +156,7 @@ Add Product to Cart UK
     sleep    5
 
 Add Product to Cart US
+    sleep    3
     go to    ${PDP_URL_US}
     sleep    3
     click element    id:option-label-size-1091-item-5123
@@ -159,6 +164,7 @@ Add Product to Cart US
     sleep    5
 
 Add Product to Cart HK
+    sleep    3
     go to    ${PDP_URL_HK}
     sleep    3
     click element    id:option-label-size-1091-item-5123
@@ -166,6 +172,7 @@ Add Product to Cart HK
     sleep    5
 
 View Bag
+    sleep    3
     mouse over      xpath://a[@class='header-button popup-trigger']
     wait until element is visible       xpath://a[@class='header-button popup-trigger']
     click element    xpath://a[@class='link__button minicart-content__edit']
@@ -190,7 +197,8 @@ Remove item on the mini bag
 
 Move to Wishlist
     click element    xpath://button[@class='button--icon cart-list-item__actions-item']
-    element should contain   xpath://*[@id="maincontent"]/div[1]/div[2]/div[1]/div/div      ${PRODUCT_NAME} HAS BEEN MOVED TO YOUR WISHLIST.
+    sleep    3
+    element should be visible    xpath://*[@id="maincontent"]/div[1]/div[2]/div[1]/div/div
 
 Increment/Decrement QTY
     click element    xpath ://button[@class='button button--icon quantity-update__button quantity-update__button--plus quantity-update__button--cart']
@@ -215,7 +223,12 @@ Add a Promo to the Bag
     input text    id:coupon_code    ${PROMO_CODE}
     click element    xpath://button[@class='button button--secondary action-apply action apply']
     sleep    3
+
+Verify message on the bag (AU)
     element should contain    xpath://p[@class='text-align--center text-align--right@m u-mb--lines paragraph--disclimer']     'FREESHIP21' promotion has been applied to this item in the order subtotal.
+
+Verify message on on the bag
+    element should contain    xpath://p[@class='text-align--center text-align--right@m u-mb--lines paragraph--disclimer']       'FREESHIP21' promotion has been applied in the item price.
 
 Proceed to Checkout from Mini Bag
     mouse over      xpath://a[@class='header-button popup-trigger']
@@ -262,8 +275,28 @@ Click View
     sleep    3
 
 Click cart icon on PLP
+#to update product if not available (New Arrivals)
+    sleep   3
     click element    xpath://*[@id="js-button--icon-cart-869155"]
     click element    id:option-label-size-1091-item-5132
+    sleep    10
+    element should be visible    xpath://*[@id="html-body"]/div[4]/div[1]/div/header/div/div/div[2]/div[3]/div/a/span
+    sleep    3
+
+Click cart icon on PLP (EU)
+#to update product if not available (New Arrivals)
+    sleep   3
+    click element    xpath://*[@id="js-button--icon-cart-869155"]
+    click element    id:option-label-size-1091-item-5132
+    sleep    10
+    element should be visible    xpath://*[@id="html-body"]/div[4]/div[1]/div/header/div/div/div[2]/div[3]/div/a/span
+    sleep    3
+
+Click cart icon on PLP (UK)
+#to update product if not available (New Arrivals)
+    sleep   3
+    click element    xpath://*[@id="js-button--icon-cart-869155"]
+    click element    id:option-label-size-1091-item-5129
     sleep    10
     element should be visible    xpath://*[@id="html-body"]/div[4]/div[1]/div/header/div/div/div[2]/div[3]/div/a/span
     sleep    3
@@ -276,9 +309,63 @@ Click cart icon on PLP (Search Results Page)
     element should be visible    xpath://*[@id="html-body"]/div[4]/div[1]/div/header/div/div/div[2]/div[3]/div/a/span
     sleep    3
 
-Click wishlist on PLP
+Click cart icon on PLP (Search Results Page) (EU)
+#to update this product if no longer available https://www.zimmermann.com/lyre-terry-towel-dress-mint-cream.html
+    click element    xpath://*[@id="js-button--icon-cart-871246"]
+    click element    id:option-label-size-1091-item-5132
+    sleep    10
+    element should be visible    xpath://*[@id="html-body"]/div[4]/div[1]/div/header/div/div/div[2]/div[3]/div/a/span
+    sleep    3
+
+Click wishlist on PLP (Search Results Page) (AU)
+#to update this product if no longer available
+    sleep    3
+    click element    xpath://button[@class='button--icon-wishlist-show button--icon-wishlist-hide button button--icon js-add-wishlist js-wishlist-871246']
+    sleep    10
+    element should be visible    xpath://*[@id="html-body"]/div[4]/div[1]/div/header/div/div/div[2]/div[2]/a/span
+    sleep    3
+
+Click wishlist on PLP (Search Results Page) (EU)
+#to update this product 867574 if no longer available
+    sleep    3
+    click element    xpath://button[@class='button--icon-wishlist-show button--icon-wishlist-hide button button--icon js-add-wishlist js-wishlist-870637']
+    sleep    10
+    element should be visible    xpath://*[@id="html-body"]/div[4]/div[1]/div/header/div/div/div[2]/div[2]/a/span
+    sleep    3
+
+Click wishlist on PLP (Search Results Page) (UK)
+#to update this product 867574 if no longer available
+    sleep    3
+    click element    xpath://button[@class='button--icon-wishlist-show button--icon-wishlist-hide button button--icon js-add-wishlist js-wishlist-870637']
+    sleep    10
+    element should be visible    xpath://*[@id="html-body"]/div[4]/div[1]/div/header/div/div/div[2]/div[2]/a/span
+    sleep    3
+
+Click wishlist on PLP (AU)
+#to update this product if no longer available
+    click element    xpath://button[@class='button button--icon button--icon-wishlist-hide js-add-wishlist js-wishlist-869155 button--icon-wishlist-show']
+    sleep    10
+    element should be visible    xpath://*[@id="html-body"]/div[4]/div[1]/div/header/div/div/div[2]/div[2]/a/span
+    sleep    3
+
+Click wishlist on PLP (US)
 #to update this product 871246 if no longer available https://www.zimmermann.com/lyre-terry-towel-dress-mint-cream.html
-    click element    xpath://*[@id="amasty-shopby-product-list"]/section/div/ul/li[1]/section/div/div[2]/div/div/button[1]
+    sleep    3
+    click element    xpath://button[@class='button button--icon button--icon-wishlist-hide js-add-wishlist js-wishlist-869155 button--icon-wishlist-show']
+    sleep    10
+    element should be visible    xpath://*[@id="html-body"]/div[4]/div[1]/div/header/div/div/div[2]/div[2]/a/span
+    sleep    3
+
+Click wishlist on PLP (EU)
+#to update this product 867574 if no longer available
+    click element    xpath://button[@class='button button--icon button--icon-wishlist-hide js-add-wishlist js-wishlist-869155 button--icon-wishlist-show']
+    sleep    10
+    element should be visible    xpath://*[@id="html-body"]/div[4]/div[1]/div/header/div/div/div[2]/div[2]/a/span
+    sleep    3
+
+Click wishlist on PLP (UK)
+#to update this product if no longer available
+    click element    xpath://button[@class='button button--icon button--icon-wishlist-hide js-add-wishlist js-wishlist-869155 button--icon-wishlist-show']
     sleep    10
     element should be visible    xpath://*[@id="html-body"]/div[4]/div[1]/div/header/div/div/div[2]/div[2]/a/span
     sleep    3
@@ -299,8 +386,18 @@ Click View All
     click element    xpath://*[@id="amasty-shopby-product-list"]/div[2]/div[1]/ul/li[7]/a
     sleep    5
     execute javascript    window.scrollTo(0,6000)
-    sleep    3
+    sleep    5
     element should not be visible    xpath://*[@id="amasty-shopby-product-list"]/div[2]/div[1]/ul
+    sleep    3
+
+Click View All HK
+    execute javascript    window.scrollTo(0,6000)
+    sleep    5
+    click element    xpath://*[@id="amasty-shopby-product-list"]/div[2]/div[1]/ul/li[6]/a
+    sleep    5
+    execute javascript    window.scrollTo(0,6000)
+    sleep    5
+    element should not be visible    xpath://*[@id="amasty-shopby-product-list"]/div[2]/div[1]/ul/li[6]/a
     sleep    3
 
 Search a Product
@@ -332,17 +429,30 @@ Search No Products
     element should contain    xpath://span[@class='base ng-binding']     WE CAN'T FIND ANY RESULTS FOR 'HELLO'
     sleep    3
 
-Check Accessibility Footer
+Check Accessibility Footer (AU)
     execute javascript    window.scrollTo(0,6000)
     sleep    3
     click element    xpath://*[@id="html-body"]/footer/div/section[1]/div/div[3]/nav/ul/li[6]/a/span
     sleep    3
     element should be visible    xpath://*[@id="html-body"]/div[10]/div[1]
 
+Check Accessibility Footer
+    execute javascript    window.scrollTo(0,6000)
+    sleep    3
+    click element    xpath://*[@id="ui-id-30"]
+    sleep    3
+    element should be visible    xpath://*[@id="html-body"]/div[10]/div[1]
+
 Continue as a Guest
+    sleep    3
     input text    id:guest-email    kim.simbulan@zimmermann.com
     click element    xpath://*[@id="checkout"]/div[2]/div[2]/div[2]/div[2]/form/div[2]/button
-    sleep    3
+    sleep   3
+
+Click Add New button
+    sleep    5
+    click element    xpath://a[@class='link__button checkout-shipping-address__action-buttons']
+    sleep    10
 
 Check No taxes/duties messaging for non DDP/DDU countries
     element should not be visible    class:totals duty-text
@@ -359,6 +469,13 @@ Check DDU Message
     sleep    3
     element should contain    xpath://*[@id="opc-sidebar"]/div[1]/div/div[2]/div[3]/div[7]/div    DUTIES AND TAXES ARE EXCLUDED AND MAY BE PAYABLE AT TIME OF ARRIVAL
     sleep    3
+
+Enter International Address(Non DDU/DDP - Australia)
+    click element       xpath://div[@class='select__field-item choices__item--selectable']
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     Australia
+    sleep    3
+    press keys    NONE  ENTER
+    sleep   3
 
 Enter International Address(DDP-New Zealand)
     click element       xpath://div[@class='select__field-item choices__item--selectable']
@@ -388,9 +505,16 @@ Enter International Address US(DDP-Canada)
     press keys    NONE  ENTER
     sleep   3
 
-Enter International Address US(DDU-Chile)
+Enter International Address US(DDP-Chile)
     click element       xpath://div[@class='select__field-item choices__item--selectable']
     input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     Chile
+    sleep    3
+    press keys    NONE  ENTER
+    sleep   3
+
+Enter International Address US(DDU-Aruba)
+    click element       xpath://div[@class='select__field-item choices__item--selectable']
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     Aruba
     sleep    3
     press keys    NONE  ENTER
     sleep   3
@@ -418,7 +542,7 @@ Enter International Address EU(DDU)
 
 Enter International Address UK(DDU-Afganistan)
     click element       xpath://div[@class='select__field-item choices__item--selectable']
-    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     Afganistan
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']     Afghanistan
     sleep    3
     press keys    NONE  ENTER
     sleep   3
@@ -470,6 +594,7 @@ Go to Store Locator
     sleep    3
 
 Go to Store Locator US
+    sleep    3
     go to   ${STORE_LOCATOR_US_URL}
     sleep    3
 
@@ -742,8 +867,11 @@ View Area Store Filter EU
     input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   IT
     element text should be    xpath://*[contains(text(),'IT, EU')]    IT, EU
     press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
+     input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   SP
+    element text should be    xpath://*[contains(text(),'SP, EU')]    SP, EU
+    press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
     input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   World
-    element should contain    id:choices-state_attr-item-choice-3   WORLDWIDE
+    element should contain    id:choices-state_attr-item-choice-4   WORLDWIDE
     press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
     sleep    3
 
@@ -778,8 +906,8 @@ View Area Store Filter US
     sleep    3
 
 View Area Store Filter HK
-    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']  SH
-    element text should be    xpath://*[contains(text(),'SH, CN')]    SH, CN
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']  C
+    element should contain    id:choices-state_attr-item-choice-1    SH, CN
     press keys    xpath://input[@class='select__field-input input__field choices__input--cloned']    ${EMPTY}
     input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   World
     element should contain    id:choices-state_attr-item-choice-2   WORLDWIDE
@@ -796,7 +924,8 @@ Check the Stores UK & EUROPE
     element text should be    xpath://a[contains(text(),'Milan')]               MILAN
     element text should be    xpath://a[contains(text(),'Paris')]               PARIS
     element text should be    xpath://a[contains(text(),'Puerto Banus')]        PUERTO BANUS
-    element text should be    xpath://a[contains(text(),'SPAIN')]               SPAIN
+    element text should be    xpath://a[contains(text(),'Rome')]                ROME
+    element text should be    xpath://a[contains(text(),'Serravalle')]          SERRAVALLE
     element text should be    xpath://a[contains(text(),'St Tropez')]           ST TROPEZ
 
 Check the Stores UNITED STATES
@@ -806,15 +935,15 @@ Check the Stores UNITED STATES
     element should contain    xpath://a[contains(text(),'BAL HARBOUR')]             BAL HARBOUR
     element should contain    xpath://a[contains(text(),'Dallas')]                  DALLAS
     element should contain    xpath://a[contains(text(),'East Hampton')]            EAST HAMPTON
-    element should contain    xpath://a[contains(text(),'GEORGIA')]                 GEORGIA
-    element should contain    xpath://a[contains(text(),'Hawaii')]                  HAWAII
+    #element should contain    xpath://a[contains(text(),'GEORGIA')]                 GEORGIA
+    #element should contain    xpath://a[contains(text(),'Hawaii')]                  HAWAII
     element should contain    xpath://a[contains(text(),'Madison Avenue')]          MADISON AVENUE
     element should contain    xpath://a[contains(text(),'Meatpacking')]             MEATPACKING
     element should contain    xpath://a[contains(text(),'Melrose Place')]           MELROSE PLACE
     element should contain    xpath://a[contains(text(),'Pacific Palisades')]       PACIFIC PALISADES
     element should contain    xpath://a[contains(text(),'Palm Beach')]              PALM BEACH
     element should contain    xpath://a[contains(text(),'San Francisco')]           SAN FRANCISCO
-    element should contain    xpath://a[contains(text(),'Short Hills')]             SHORT HILLS
+    #element should contain    xpath://a[contains(text(),'Short Hills')]             SHORT HILLS
     element should contain    xpath://a[contains(text(),'SOHO')]                    SOHO
     element should contain    xpath://a[contains(text(),'South Coast Plaza')]       SOUTH COAST PLAZA
     element should contain    xpath://a[contains(text(),'Woodbury Outlet')]         WOODBURY OUTLET
@@ -884,16 +1013,16 @@ View Milan
     element text should be    xpath://h1[contains(text(),'Milan')]   MILAN
 
 View Puerto Banus
-    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
-    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
-    sleep    3
-    element text should be    xpath://h1[contains(text(),'Puerto Banus')]   PUERTO BANUS
-
-View Spain
     mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[2]/div/a[2]/span
     click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[2]/div/a[2]/span
     sleep    3
-    element text should be    xpath://h1[contains(text(),'SPAIN')]   SPAIN
+    element text should be    xpath://h1[contains(text(),'Puerto Banus')]   PUERTO BANUS
+
+View Madrid
+    mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    click element   xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div[1]/div/a[2]/span
+    sleep    3
+    element text should be    xpath://h1[contains(text(),'Madrid')]   MADRID
 
 Check and View Store Details LON, UK
     input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   C
@@ -963,7 +1092,7 @@ Check and View Store Details SH, CN
     press keys    NONE  ENTER
     sleep    3
     execute javascript    window.scrollTo(0,1000)
-    element should contain    xpath://*[contains(text(),'Shanghai')]   SHANGHAI
+    element should be visible    xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[1]
 
 View Shanghai
     mouse over      xpath://*[@id="maincontent"]/div[3]/div/div[4]/div[2]/div/div/a[2]/span
