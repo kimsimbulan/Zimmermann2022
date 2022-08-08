@@ -19,7 +19,7 @@ ${EU_LOGIN_PAGE}    https://www.zimmermann.com/eu/customer/account/login
 ${UK_LOGIN_PAGE}    https://www.zimmermann.com/uk/customer/account/login
 ${US_LOGIN_PAGE}    https://www.zimmermann.com/us/customer/account/login
 ${HK_LOGIN_PAGE}    https://www.zimmermann.com/hk/customer/account/login
-${AU_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestAU7@gmail.com
+${AU_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestAU8@gmail.com
 ${US_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestUS7@gmail.com
 ${UK_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestUK7@gmail.com
 ${EU_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestEU7@gmail.com
