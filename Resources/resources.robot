@@ -9,10 +9,20 @@ ${US_URL}         https://staging3.zimmermann.com/us
 ${UK_URL}         https://staging3.zimmermann.com/uk
 ${EU_URL}         https://staging3.zimmermann.com/eu
 ${HK_URL}         https://staging3.zimmermann.com/hk
-${PDP_URL_AU}  https://staging3.zimmermann.com/new-arrivals/nina-bandeau-buckle-bra-hot-coral.html
+${AU_LOGIN_URL}     https://staging3.zimmermann.com/customer/account/login/
+${US_LOGIN_URL}     https://staging3.zimmermann.com/us/customer/account/login/
+${EU_LOGIN_URL}     https://staging3.zimmermann.com/eu/customer/account/login/
+${UK_LOGIN_URL}     https://staging3.zimmermann.com/uk/customer/account/login/
+${HK_LOGIN_URL}     https://staging3.zimmermann.com/hk/customer/account/login/
+${AU_REGISTRATION_URL}      https://staging3.zimmermann.com/customer/account/create/
+${US_REGISTRATION_URL}      https://staging3.zimmermann.com/us/customer/account/create/
+${UK_REGISTRATION_URL}      https://staging3.zimmermann.com/uk/customer/account/create/
+${EU_REGISTRATION_URL}      https://staging3.zimmermann.com/eu/customer/account/create/
+${HK_REGISTRATION_URL}      https://staging3.zimmermann.com/hk/customer/account/create/
+${PDP_URL_AU}  https://staging3.zimmermann.com/new-arrivals/nina-halter-tie-top-queensland-map.html
 ${PDP_URL_US}  https://staging3.zimmermann.com/us/swim/swimwear/bikinis/shelly-mini-tri-bikini-yellow-tie-dye.html
 ${PDP_URL_EU}  https://staging3.zimmermann.com/eu/new-arrivals/nina-spliced-mini-tri-bikini-spliced.html
-${PDP_URL_UK}  https://staging3.zimmermann.com/uk/new-arrivals/shelly-scoop-buckle-1pc-teal-leopard.html
+${PDP_URL_UK}  https://staging3.zimmermann.com/uk/new-arrivals/shelly-zip-frill-1pc-ruby.html
 ${PDP_URL_HK}  https://staging3.zimmermann.com/hk/new-arrivals/nina-bandeau-buckle-bra-hot-coral.html
 ${PDP_GC_AU}   https://staging3.zimmermann.com/digital-gift-card.html
 ${PDP_GC_US}   https://staging3.zimmermann.com/us/digital-gift-card.html
@@ -25,11 +35,11 @@ ${STORE_LOCATOR_EU_URL}    https://staging3.zimmermann.com/eu/store/locate-store
 ${STORE_LOCATOR_UK_URL}    https://staging3.zimmermann.com/uk/store/locate-store/
 ${STORE_LOCATOR_HK_URL}    https://staging3.zimmermann.com/hk/store/locate-store/
 ${EXPRESS PM}   matrixrate_matrixrate_6148
-${AU_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestAU6@gmail.com
-${US_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestUS6@gmail.com
-${UK_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestUK6@gmail.com
-${EU_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestEU6@gmail.com
-${HK_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationTestHK6@gmail.com
+${AU_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationSTG2TestAU2@gmail.com
+${US_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationSTG3TestUS2@gmail.com
+${UK_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationSTG2TestUK3@gmail.com
+${EU_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationSTG2TestEU3@gmail.com
+${HK_EMAIL_ADDRESS_REGISTRATION}   kimc.simbulan+SignUpAutomationSTG2TestHK3@gmail.com
 ${AU_DOMESTIC}    120 Dunning Avenue Rosebery, NSW 2018
 ${US_DOMESTIC}    120 Waterman Ave Apt 1
 ${UK_DOMESTIC}    120 Ducks Hill Road
@@ -46,14 +56,14 @@ ${GUEST_MOBILE}        xpath://html/body/div[5]/main/div/div/div[2]/div[2]/div[2
 ${GUEST_CONTINUE_BUTTON}    xpath://*[@id="checkout"]/div[2]/div[2]/div[2]/div[2]/form/div[2]/button
 ${CLICK_TO_UNSUBSCRIBE}     xpath://button[@class='dropdown-list__label dropdown-list__label--normal u-pr--section u-pr--unrelated@xl']
 ${CLICK_TO_SUBSCRIBE}       xpath://*[@id="form-validate"]/div/button
-${AU_GIFT_CARD_NUMBER}      600057503
-${AU_GIFT_CARD_PIN}         3049
-${US_GIFT_CARD_NUMBER}      600100872
-${US_GIFT_CARD_PIN}         1463
+${AU_GIFT_CARD_NUMBER}      600057510
+${AU_GIFT_CARD_PIN}         3661
+${US_GIFT_CARD_NUMBER}      600100926
+${US_GIFT_CARD_PIN}         9583
 ${UK_GIFT_CARD_NUMBER}      600090678
 ${UK_GIFT_CARD_PIN}         5170
-${EU_GIFT_CARD_NUMBER}      6000090669
-${EU_GIFT_CARD_PIN}         7397
+${EU_GIFT_CARD_NUMBER}      6000090676
+${EU_GIFT_CARD_PIN}         7231
 ${HK_GIFT_CARD_NUMBER}      600111847
 ${HK_GIFT_CARD_PIN}         2954
 ${AU_EMAILADDRESS_SUBSCRIBE_FOOTER}     xpath://*[@class='control input']/input[@class='input__field']
@@ -64,6 +74,7 @@ ${HK_EMAILADDRESS_SUBSCRIBE_FOOTER}     xpath://*[@class='control input']/input[
 ${US_NEW_ZEALAND_COUNTRY}   xpath://input[@class='select__field-input input__field choices__input--cloned']     New Zealand
 ${AUTHENTICATION_WINDOW}    id:Cardinal-ElementContainer
 ${OTP_FIELD}    xpath://*[@id="content"]/div[2]/form[1]/input[1]
+${CHECKOUT_BUTTON}     id:top-cart-btn-checkout
 
 *** Keywords ***
 Open Website
@@ -82,34 +93,34 @@ Open HK Website
     open browser    ${HK_URL}  chrome
 
 Open Login
-    open browser    https://staging3.zimmermann.com/customer/account/login/     ${BROWSER}
+    open browser    ${AU_LOGIN_URL}     ${BROWSER}
 
 Open Login US
-    open browser    https://staging3.zimmermann.com/us/customer/account/login/  ${BROWSER}
+    open browser    ${US_LOGIN_URL}     ${BROWSER}
 
 Open Login UK
-    open browser    https://staging3.zimmermann.com/uk/customer/account/login/  ${BROWSER}
+    open browser    ${UK_LOGIN_URL}     ${BROWSER}
 
 Open Login EU
-    open browser    https://staging3.zimmermann.com/eu/customer/account/login/  ${BROWSER}
+    open browser    ${EU_LOGIN_URL}     ${BROWSER}
 
 Open Login HK
-    open browser    https://staging3.zimmermann.com/hk/customer/account/login/  ${BROWSER}
+    open browser    ${HK_LOGIN_URL}     ${BROWSER}
 
 Open Registration
-    open browser    https://staging3.zimmermann.com/customer/account/create/    ${BROWSER}
+    open browser    ${AU_REGISTRATION_URL}      ${BROWSER}
 
 Open Registration US
-    open browser    https://staging3.zimmermann.com/us/customer/account/create/    ${BROWSER}
+    open browser    ${US_REGISTRATION_URL}      ${BROWSER}
 
 Open Registration UK
-    open browser    https://staging3.zimmermann.com/uk/customer/account/create/    ${BROWSER}
+    open browser    ${UK_REGISTRATION_URL}      ${BROWSER}
 
 Open Registration EU
-    open browser    https://staging3.zimmermann.com/eu/customer/account/create/    ${BROWSER}
+    open browser    ${EU_REGISTRATION_URL}      ${BROWSER}
 
 Open Registration HK
-    open browser    https://staging3.zimmermann.com/hk/customer/account/create/    ${BROWSER}
+    open browser    ${HK_REGISTRATION_URL}      ${BROWSER}
 
 Accept Cookie
     sleep    3
@@ -190,6 +201,7 @@ New Email Address (HK)
     input text    xpath://*[@id="email_address"]    ${HK_EMAIL_ADDRESS_REGISTRATION}
 
 Add Product to Cart AU
+    sleep    3
     go to    ${PDP_URL_AU}
 
 Add Product to Cart US
@@ -204,18 +216,19 @@ Add Product to Cart EU
 Add Product to Cart HK
     go to    ${PDP_URL_HK}
 
-
 Proceed to Cart Page
-    sleep    3
+    sleep    5
     click element    id:option-label-size-1091-item-5123
     click element    id:product-addtocart-button
     sleep    5
     mouse over      xpath://a[@class='header-button popup-trigger']
     wait until element is visible       xpath://a[@class='header-button popup-trigger']
     mouse over      xpath://a[@class='header-button popup-trigger']
-    #sleep    10
-    click element    id:top-cart-btn-checkout
-    sleep    3
+    ${count}=   get element count    ${CHECKOUT_BUTTON}
+    run keyword if    ${count} > 0  Click Checkout button
+    ...     ELSE    Click Cart Icon
+    #click element    id:top-cart-btn-checkout
+    sleep    10
 
 Select Gift Card AU
     go to   ${PDP_GC_AU}
@@ -240,7 +253,7 @@ Select Gift Card HK
 Add Digital Gift Card
     click element    xpath://*[@id="product-options-wrapper"]/div[1]/fieldset/div/div/div[1]
     wait until element is visible    xpath://input[@class='select__field-input input__field choices__input--cloned']
-    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   500
+    input text    xpath://input[@class='select__field-input input__field choices__input--cloned']   1000
     press keys    NONE   ENTER
     input text    id:giftcard_sender_name   Kim Simbulan
     input text    id:giftcard_recipient_name    Kimmy
@@ -253,9 +266,17 @@ Add Digital Gift Card
     sleep    10
 
 Go to Checkout Page
-    sleep    5
+    sleep    10
     click element    xpath://a[@class='link__button checkout-shipping-address__action-buttons']
     sleep    10
+
+Click Checkout button
+    click element    ${CHECKOUT_BUTTON}
+    sleep    3
+
+Click Cart Icon
+    click element   xpath://a[@class='header-button popup-trigger']
+    click element    id:top-cart-btn-checkout
 
 Enter Domestic Address
     input text    xpath://input[@class='input__field required']    ${AU_DOMESTIC}
@@ -287,7 +308,7 @@ Enter International Address
     sleep    3
     press keys    NONE  ENTER
     sleep   3
-    input text  xpath://input[@class='input__field required']    ${AU_INTERNATIONAL_ADDRESS}}
+    input text  xpath://input[@class='input__field required']    ${AU_INTERNATIONAL_ADDRESS}
     sleep   10
     click element    xpath://li[@class='js-pca__item pca__item'][1]
 
@@ -307,7 +328,7 @@ Enter International Address UK
     sleep    3
     press keys    NONE  ENTER
     sleep   3
-    input text  xpath://input[@class='input__field required']    ${UK_INTERNATIONAL_ADDRESS}}
+    input text  xpath://input[@class='input__field required']    ${UK_INTERNATIONAL_ADDRESS}
     sleep   10
     click element    xpath://li[@class='js-pca__item pca__item'][1]
 
@@ -467,7 +488,8 @@ Place Order
     sleep   5
 
 Verify Order Success Page
-    sleep   5
+    sleep   10
+    wait until page contains    class:opc-progress-bar u-pl--none
 
 Click Subsription on My Account
     click element    xpath://*[@id="maincontent"]/div[2]/div[1]/div[1]/div/div/div[2]/ul/li[11]/a
@@ -497,19 +519,19 @@ Click Continue on Footer
     click button    id:newsletter-footer-button
 
 Proceed to Subscribe (AU)
-    input text    ${AU_EMAILADDRESS_SUBSCRIBE_FOOTER}   kimc.simbulan+subscribeFooterAutomationAU6@gmail.com
+    input text    ${AU_EMAILADDRESS_SUBSCRIBE_FOOTER}   kimc.simbulan+subscribeFooterAutomationSTG2AU2@gmail.com
 
 Proceed to Subscribe (US)
-    input text    ${US_EMAILADDRESS_SUBSCRIBE_FOOTER}   kimc.simbulan+subscribeFooterAutomationUS6@gmail.com
+    input text    ${US_EMAILADDRESS_SUBSCRIBE_FOOTER}   kimc.simbulan+subscribeFooterAutomationSTG3US2@gmail.com
 
 Proceed to Subscribe (UK)
-    input text    ${UK_EMAILADDRESS_SUBSCRIBE_FOOTER}   kimc.simbulan+subscribeFooterAutomationUK6@gmail.com
+    input text    ${UK_EMAILADDRESS_SUBSCRIBE_FOOTER}   kimc.simbulan+subscribeFooterAutomationSTG3UK2@gmail.com
 
 Proceed to Subscribe (EU)
-    input text    ${EU_EMAILADDRESS_SUBSCRIBE_FOOTER}   kimc.simbulan+subscribeFooterAutomationEU6@gmail.com
+    input text    ${EU_EMAILADDRESS_SUBSCRIBE_FOOTER}   kimc.simbulan+subscribeFooterAutomationSTG3EU2@gmail.com
 
 Proceed to Subscribe (HK)
-    input text    ${HK_EMAILADDRESS_SUBSCRIBE_FOOTER}   kimc.simbulan+subscribeFooterAutomationHK6@gmail.com
+    input text    ${HK_EMAILADDRESS_SUBSCRIBE_FOOTER}   kimc.simbulan+subscribeFooterAutomationSTG3HK2@gmail.com
 
 Click Submit button
     click element    xpath://*[@id="newsletter-validate-detail"]/div[2]/button
@@ -621,56 +643,6 @@ Check the Stores UK & EUROPE
     element text should be    xpath://a[contains(text(),'Puerto Banus')]        PUERTO BANUS
     element text should be    xpath://a[contains(text(),'SPAIN')]               SPAIN
     element text should be    xpath://a[contains(text(),'St Tropez')]           ST TROPEZ
-
-#Check the Stores UNITED STATES 1
-#    execute javascript        window.scrollTo(0,1000)
-#    element text should be    xpath://*[contains(text(),'UNITED STATES')]           UNITED STATES
-#    element should contain    xpath://a[contains(text(),'Americana Manhasset')]     AMERICANA MANHASSET
-#    element should contain    xpath://a[contains(text(),'BAL HARBOUR')]             BAL HARBOUR
-#    element should contain    xpath://a[contains(text(),'Dallas')]                  DALLAS
-#    element should contain    xpath://a[contains(text(),'East Hampton')]            EAST HAMPTON
-#    element should contain    xpath://a[contains(text(),'GEORGIA')]                 GEORGIA
-#    element should contain    xpath://a[contains(text(),'Hawaii')]                  HAWAII
-#    element should contain    xpath://a[contains(text(),'Madison Avenue')]          MADISON AVENUE
-#    element should contain    xpath://a[contains(text(),'Meatpacking')]             MEATPACKING
-#    element should contain    xpath://a[contains(text(),'Melrose Place')]           MELROSE PLACE
-#    element should contain    xpath://a[contains(text(),'Pacific Palisades')]       PACIFIC PALISADES
-#    element should contain    xpath://a[contains(text(),'Palm Beach')]              PALM BEACH
-#    element should contain    xpath://a[contains(text(),'San Francisco')]           SAN FRANCISCO
-#    execute javascript        window.scrollTo(0,1800)
-#    element should contain    xpath://a[contains(text(),'Short Hills')]             SHORT HILLS
-#    element should contain    xpath://a[contains(text(),'SOHO')]                    SOHO
-#    element should contain    xpath://a[contains(text(),'South Coast Plaza')]       SOUTH COAST PLAZA
-#    element should contain    xpath://a[contains(text(),'Woodbury Outlet')]         WOODBURY OUTLET
-#    element should contain    xpath://a[contains(text(),'Wynn Plaza')]              WYNN PLAZA
-
-#Check the Stores AUSTRALIA (US)
-#    execute javascript      window.scrollTo(0,300)
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[1]     AUSTRALIA
-#    execute javascript      window.scrollTo(0,1200)
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[1]/div/a[1]     ADELAIDE
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[2]/div/a[1]     ARMADALE
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[3]/div/a[1]     BONDI
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[4]/div/a[1]     BRISBANE
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[5]/div/a[1]     CHADSTONE
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[6]/div/a[1]     CHATSWOOD
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[7]/div/a[1]     CLAREMONT
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[8]/div/a[1]     DONCASTER
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[9]/div/a[1]     EMPORIUM
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[10]/div/a[1]    INDOOROOPILLY
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[11]/div/a[1]    JAMES ST
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[12]/div/a[1]    MACQUARIE
-#    execute javascript      window.scrollTo(0,1600)
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[13]/div/a[1]    MELBOURNE OUTLET
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[14]/div/a[1]    MIRANDA
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[15]/div/a[1]    PACIFIC FAIR
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[16]/div/a[1]    PADDINGTON
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[17]/div/a[1]    QV
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[18]/div/a[1]    SOUTH YARRA
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[19]/div/a[1]    SYDNEY CBD
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[20]/div/a[1]    SYDNEY OUTLET
-#    element text should be    xpath://*[@id="maincontent"]/div[3]/div/div[5]/div[2]/div[21]/div/a[1]    WARRINGAH MALL
-#    sleep    3
 
 Select Store
     click element    xpath://*[@id="state_search"]/div/div/div[1]/div/div
